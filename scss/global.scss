@@ -1,0 +1,28 @@
+@use 'root' as * ;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.main-content {
+    background: $bg-main-color;
+}
+
+.main-header {
+    background: $header-color;
+    height: 6rem;
+    &__menu {
+        color: white;
+    }
+}
+

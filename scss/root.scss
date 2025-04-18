@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap');
+
+// Couleurs
+$header-color: rgb(10, 9, 10);
+$bg-main-color: rgba(5,3,5);
+
+$title-color: wheat;
+$txt-color: rgb(240, 240, 226);
+
+$btn-color: rgb(12, 12, 11);
+$btn-border: rgba(190, 190, 154, 0.459);
+// Textes
+$main-titles: 'Lora';
+$subtitle-txt: 1.2rem;
+$subtitle-weight: 300;
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-center-columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@mixin btn ($width) {
+    border: none;
+    font-size: $subtitle-txt;
+    font-weight: $subtitle-weight;
+    width: $width;
+    border: 1px solid $btn-border;
+    border-radius: 100px;
+    padding-block: 1rem;
+    color: $txt-color;
+    background-color: $btn-color;
+    opacity: 0.85;
+    @include flex-center;
+}
