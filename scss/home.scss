@@ -10,26 +10,32 @@
     padding-inline: 1rem;
     &__menu {
         color: $txt-color;
-        font-size: 1.2rem;
-        padding-top: 1rem;
+        font-size: 1.5rem;
+        padding-top: 1.3rem;
+        &:hover {
+            cursor: pointer;
+        }
     }
     &__logo {
-        width: 3rem;
+        width: 3.5rem;
         height: auto;
         border-radius: 100px;
         padding-block: 0.5rem;
     }
     &__cart {
         color: $txt-color;
-        font-size: 1.2rem;
-        padding-top: 1rem;
+        font-size: 1.5rem;
+        padding-top: 1.3rem;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
 
 .headline-wrapper {
     width: 100%;
-    height: 40rem;
+    height: 50rem;
     background-image: url(/img/violon-zoom.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,6 +58,7 @@
         &__subtitle {
             margin: 0;
             color: darken($txt-color, 60%);
+            font-size: $subtitle-txt;
             font-weight: 400;
         }
     }
@@ -71,7 +78,7 @@
         &__title {
             color: $txt-color;
             font-size: $subtitle-txt;
-            font-weight: $subtitle-weight; 
+            font-weight: $subtitle-weight;
         }
         &__bar {
             width: 1px;
@@ -84,22 +91,43 @@
 }
 
 .article-container {
-    margin-top: 5rem;
-    padding-inline: 5%;
+    padding-block: 7rem;
+    padding-inline: 13%;
     @include flex-center;
     .bigcard {
-        width: 45%;
-        height: auto;
+        color: $txt-color;
+        @include grid-bigcard-columns;
         &__img {
             width: 100%;
+            height: auto;
+            // grid-column: 1 / 2;
+            // grid-row: 1 / 3;
+            border-radius: 1rem;
+        }
+        &__about {
+            @include flex-center-columns;
+            align-items: center;
+            gap: 2rem;
+            height: auto;
+            &__title {
+                color: $title-color-card;
+                font-size: 2rem;
+                // grid-column: 2 / 3;
+                // grid-row: 1 / 2;
+            }
+            &__subtitle {
+                color: $txt-color-card;
+                font-size: $subtitle-txt;
+                font-weight: $subtitle-weight;
+                // grid-column: 2 / 3;
+                // grid-row: 2 / 3;
+                margin-bottom: auto;
+            }
+            &__btn {
+                @include btn(13rem);
+            }
         }
     }
 }
-
-
-.btn {
-    @include btn (13rem);
-  }
-  
 
 
