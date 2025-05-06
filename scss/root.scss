@@ -13,7 +13,9 @@ $btn-color: rgb(12, 12, 11);
 $btn-border: rgba(190, 190, 154, 0.459);
 // Textes
 $main-titles: 'Lora';
-$subtitle-txt: 1.2rem;
+$subtitle-txt: 1.4rem;
+$title-bigcard: 2.7rem;
+$btn-txt: 1.2rem;
 $subtitle-weight: 300;
 
 
@@ -34,11 +36,12 @@ $subtitle-weight: 300;
     grid-template-rows: (auto, auto);
     gap: 4rem;
 }
-@mixin btn ($width) {
+@mixin btn ($width, $height) {
     border: none;
-    font-size: $subtitle-txt;
+    font-size: $btn-txt;
     font-weight: $subtitle-weight;
     width: $width;
+    height: $height;
     border: 1px solid $btn-border;
     border-radius: 100px;
     padding-block: 1rem;
