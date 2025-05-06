@@ -39,8 +39,9 @@
     background-image: url(/img/violon-zoom.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    border-top: 0.3rem solid $title-color;
-    border-bottom: 0.8rem solid $title-color;
+    border-top: 0.1rem solid $title-color;
+    border-bottom: 0.4rem solid $title-color;
+    margin-bottom: 1.5rem;
     .headline {
         width: 50%;
         height: 100%;
@@ -58,7 +59,7 @@
         }
         &__subtitle {
             margin: 0;
-            color: darken($txt-color, 60%);
+            color: darken($txt-color, 65%);
             font-size: $subtitle-txt + 0.2;
             font-weight: 400;
         }
@@ -98,11 +99,36 @@
     .bigcard {
         color: $txt-color;
         @include grid-bigcard-columns;
-        margin-bottom: 17rem;
-        &__img {
+        margin-bottom: 17rem; 
+        &__img-wrapper {
+            position: relative;
             width: 120%;
-            height: auto;
+        }
+        &__img {
+            width: 100%;
             border-radius: 1rem;
+        }
+        .arrow {
+            position: absolute;
+            top: 90%;
+            transform: translateY(-50%);
+            border: none;
+            width: auto;
+            border-radius: 40%;
+            border: 2px solid white;
+            font-size: 1rem;
+            padding: 0.7rem;
+            opacity: 0.2;
+            background: $bg-main-color;
+            color: $txt-color;
+            cursor: pointer;
+            z-index: 10;
+        }
+        #arrow-left {
+            left: 0.3rem;
+        }
+        #arrow-right {
+            right: 0.3rem;
         }
         &__about {
             @include flex-center-columns;

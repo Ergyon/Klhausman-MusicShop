@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -6,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Jost", Tahoma, Geneva, Verdana, sans-serif;
 }
 body a {
   text-decoration: none;
@@ -61,8 +62,9 @@ body a {
   background-image: url(/img/violon-zoom.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  border-top: 0.3rem solid wheat;
-  border-bottom: 0.8rem solid wheat;
+  border-top: 0.1rem solid wheat;
+  border-bottom: 0.4rem solid wheat;
+  margin-bottom: 1.5rem;
 }
 .headline-wrapper .headline {
   width: 50%;
@@ -84,7 +86,7 @@ body a {
 }
 .headline-wrapper .headline__subtitle {
   margin: 0;
-  color: #696937;
+  color: #59592e;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -127,10 +129,35 @@ body a {
   gap: 4rem;
   margin-bottom: 17rem;
 }
-.article-container .bigcard__img {
+.article-container .bigcard__img-wrapper {
+  position: relative;
   width: 120%;
-  height: auto;
+}
+.article-container .bigcard__img {
+  width: 100%;
   border-radius: 1rem;
+}
+.article-container .bigcard .arrow {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  border: none;
+  width: auto;
+  border-radius: 40%;
+  border: 2px solid white;
+  font-size: 1rem;
+  padding: 0.7rem;
+  opacity: 0.2;
+  background: rgb(5, 3, 5);
+  color: rgb(240, 240, 226);
+  cursor: pointer;
+  z-index: 10;
+}
+.article-container .bigcard #arrow-left {
+  left: 0.3rem;
+}
+.article-container .bigcard #arrow-right {
+  right: 0.3rem;
 }
 .article-container .bigcard__about {
   display: flex;

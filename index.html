@@ -41,7 +41,25 @@
 
         <section class="article-container">
             <article class="bigcard">
-                <img class="bigcard__img" id="imgSLider1" src="/img/violons-group.jpg" alt="">
+                <div class="bigcard__img-wrapper" data-slider-index="0">
+                    <img class="bigcard__img" id="imgSlider0" src="" alt="">
+                    <button class="arrow" id="arrow-left" data-direction="right" data-slider="0">&#10094</button>
+                    <button class="arrow" id="arrow-right" data-direction="left" data-slider="0">&#10095</button>
+                </div>
+                <div class="bigcard__about">
+                    <div class="bigcard__about__title">Nom du produit</div>
+                    <div class="bigcard__about__subtitle" id="txtSlider0">Ceci est une description rapide et efficace du produit, mettant en valeur sa qualite et sa rarete. Insister sur le cote artisanal et fait a la main<br>
+                    Et eventuellement quleques aspects techniques</div>
+                    <button class="btn bigcard__about__btn">Demander un devis</button>
+                </div>
+            </article>
+
+            <article class="bigcard">
+                <div class="bigcard__img-wrapper" data-slider-index="1">
+                    <img class="bigcard__img" id="imgSlider1" src="" alt="">
+                    <button class="arrow" id="arrow-left" data-direction="right" data-slider="1">&#10094</button>
+                    <button class="arrow" id="arrow-right" data-direction="left" data-slider="1">&#10095</button>
+                </div>
                 <div class="bigcard__about">
                     <div class="bigcard__about__title">Nom du produit</div>
                     <div class="bigcard__about__subtitle" id="txtSlider1">Ceci est une description rapide et efficace du produit, mettant en valeur sa qualite et sa rarete. Insister sur le cote artisanal et fait a la main<br>
@@ -51,7 +69,11 @@
             </article>
 
             <article class="bigcard">
-                <img class="bigcard__img" id="imgSLider2" src="img/snare.jpg" alt="">
+                <div class="bigcard__img-wrapper" data-slider-index="2">
+                    <img class="bigcard__img" id="imgSlider2" src="" alt="">
+                    <button class="arrow" id="arrow-left" data-direction="right" data-slider="2">&#10094</button>
+                    <button class="arrow" id="arrow-right" data-direction="left" data-slider="2">&#10095</button>
+                </div>
                 <div class="bigcard__about">
                     <div class="bigcard__about__title">Nom du produit</div>
                     <div class="bigcard__about__subtitle" id="txtSlider2">Ceci est une description rapide et efficace du produit, mettant en valeur sa qualite et sa rarete. Insister sur le cote artisanal et fait a la main<br>
@@ -59,17 +81,8 @@
                     <button class="btn bigcard__about__btn">Demander un devis</button>
                 </div>
             </article>
-
-            <article class="bigcard">
-                <img class="bigcard__img" id="imgSLider3" src="img/piano-keys-black.jpg" alt="">
-                <div class="bigcard__about">
-                    <div class="bigcard__about__title">Nom du produit</div>
-                    <div class="bigcard__about__subtitle" id="txtSlider3">Ceci est une description rapide et efficace du produit, mettant en valeur sa qualite et sa rarete. Insister sur le cote artisanal et fait a la main<br>
-                    Et eventuellement quleques aspects techniques</div>
-                    <button class="btn bigcard__about__btn">Demander un devis</button>
-                </div>
-            </article>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
