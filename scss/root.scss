@@ -50,3 +50,12 @@ $subtitle-weight: 300;
     opacity: 0.85;
     @include flex-center;
 }
+
+// Keyframes
+@keyframes twinkle {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 0.6;
+    }
+}
