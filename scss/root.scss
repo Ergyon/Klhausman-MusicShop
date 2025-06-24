@@ -3,6 +3,7 @@
 // Couleurs
 $header-color: rgb(10, 9, 10);
 $bg-main-color: rgba(5,3,5);
+$footer-color: linear-gradient(180deg,rgba(3, 3, 3, 1) 27%, rgb(26, 25, 24) 92%);
 
 $title-color: wheat;
 $title-color-card: lighten($title-color, 10%);
@@ -45,10 +46,10 @@ $subtitle-weight: 300;
     border: 1px solid $btn-border;
     border-radius: 100px;
     padding-block: 1rem;
-    color: $txt-color;
-    background-color: $btn-color;
+    color: darken($txt-color, 7%);
+    background: $footer-color;
     opacity: 0.85;
-    @include flex-center;
+    // @include flex-center;
 }
 
 // Keyframes
@@ -57,5 +58,37 @@ $subtitle-weight: 300;
         opacity: 0;
     } to {
         opacity: 0.6;
+    }
+}
+@keyframes slideInUp {
+    from {
+        transform: translateY(15%);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes blink {
+    0%, 25%, 60%, 100% {
+        opacity: 0;
+    } 13%, 47%, 75% {
+        opacity: 1;
+    }
+}
+@keyframes appearsSlowly {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+@keyframes growsUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    } to {
+        transform: scale(1);
+        opacity: 1;
     }
 }

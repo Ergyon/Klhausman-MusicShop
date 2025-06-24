@@ -1,37 +1,6 @@
 @use 'global.scss' as *;
 @use 'root.scss' as *;
 
-.main-header {
-    background: $header-color;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-inline: 1rem;
-    &__menu {
-        color: $txt-color;
-        font-size: 1.5rem;
-        padding-top: 1.3rem;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    &__logo {
-        width: 3.5rem;
-        height: auto;
-        border-radius: 100px;
-        padding-block: 0.5rem;
-    }
-    &__cart {
-        color: $txt-color;
-        font-size: 1.5rem;
-        padding-top: 1.3rem;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-}
-
 
 .headline-wrapper {
     width: 100%;
@@ -42,6 +11,7 @@
     border-top: 0.1rem solid $title-color;
     border-bottom: 0.4rem solid $title-color;
     margin-bottom: 1.5rem;
+    animation: appearsSlowly 1s ease-out forwards;
     .headline {
         width: 50%;
         height: 100%;
@@ -52,16 +22,26 @@
         &__title {
             margin-top: 0;
             margin-bottom: 1.8rem;
-            font-size: 8rem;
+            font-size: 8.3rem;
             color: $title-color;
             font-family: $main-titles, 'Montserrat', sans-serif;
             font-weight: 500;
+            opacity: 0;
+            animation: slideInUp 1.6s ease-in-out forwards;
         }
         &__subtitle {
             margin: 0;
             color: darken($txt-color, 65%);
             font-size: $subtitle-txt + 0.2;
             font-weight: 400;
+        }
+        #headlineSubtitle::after {
+            content: "|";
+            animation: blink 2.7s ease-in-out forwards 2;
+            animation-delay: 0.6s;
+            margin-left: 5px;
+            color: darken($txt-color, 60%);
+            opacity: 0;
         }
     }
 }
@@ -82,15 +62,23 @@
             color: $txt-color;
             font-size: 1.9rem;
             font-weight: $subtitle-weight;
+            transition: 0.2s ease-in-out;
+            animation: growsUp 0.6s ease-out;
+            &:hover {
+                transform: scale(95%);
+                color: darken($txt-color, 15%);
+            }
         }
         &__bar {
-            width: 1px;
+            width: 3px;
             height: 100%;
-            background: darken($txt-color, 40%);
-            opacity: 0;
+            background: darken($txt-color, 50%);
+            border-radius: 20px;
+            // opacity: 0;
             margin-right: 2.5rem;
-            transition: 0.5s;
-            animation: twinkle 1.5s linear infinite alternate-reverse;
+            transition: 0.3s;
+            animation: appearsSlowly 2.2s ease-in-out;
+            animation: twinkle 0.8s linear infinite alternate-reverse;
             &:hover {
                 height: 0%;
             }
@@ -99,31 +87,32 @@
 }
 
 .article-container {
-    padding-block: 7rem;
+    padding-top: 7rem;
     padding-inline: 17%;
     .bigcard {
         color: $txt-color;
         @include grid-bigcard-columns;
-        margin-bottom: 17rem; 
+        padding-bottom: 16rem;
         &__img-wrapper {
             position: relative;
             width: 120%;
+            padding-bottom: 2rem;
         }
         &__img {
             width: 100%;
             border-radius: 1rem;
+            box-shadow: rgba(59, 59, 56, 0.329) 0px 18px 100px 20px;
         }
         .arrow {
             position: absolute;
-            top: 90%;
+            top: 85%;
             transform: translateY(-50%);
             border: none;
             border-radius: 40%;
-            border: 2px solid white;
             font-size: 0.7rem;
-            padding: 0.6rem;
-            opacity: 0.2;
-            background: $bg-main-color;
+            padding: 0.7rem;
+            opacity: 0.3;
+            background: $btn-color;
             color: $txt-color;
             cursor: pointer;
             z-index: 10;
@@ -139,9 +128,9 @@
             align-items: center;
             text-align: center;
             gap: 2rem;
-            height: auto;
             padding-left: 9rem;
             padding-bottom: 1.5rem;
+            position: relative;
             &__title {
                 color: $title-color-card;
                 font-size: $title-bigcard;
@@ -155,11 +144,58 @@
             }
             &__btn {
                 @include btn(15rem, 4rem);
+                position: absolute;
+                bottom: 5%;
                 font-size: $btn-txt;
                 cursor: pointer;
+                transition: 0.2s;
+                &:hover {
+                    background-color: lighten($btn-color, 3%);
+                    box-shadow: rgba(199, 207, 143, 0.473) 1px 1px 1px 0px inset, rgba(255, 255, 255, 0.274) -1px -1px 1px 1px inset;
+                }
             }
         }
     }
 }
 
+.side-modal {
+    position: fixed;
+    top: 0;
+    // left: -300px;
+    width: 20%;
+    height: 100%;
+    background: $footer-color;
+    color: $txt-color;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    gap: 2rem;
+    .side-modal.active {
+        left: 0;
+    }
+    &__close {
+        background: none;
+        border: none;
+        color: $txt-color;
+        font-size: 2rem;
+        align-self: flex-end;
+        cursor: pointer;
+    }
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+        padding-top: 2rem;
+        &__bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            margin-top: auto;
+            padding-bottom: 2rem;
+        }
+    }
+
+}
 

@@ -84,3 +84,20 @@ arrows.forEach(arrow => {
         updateSlider(sliderIndex)
     })
 })
+
+// Animation texte tape au clavier
+const subtitleLetters = "Un savoir-faire d'excellence et des instruments de prestige depuis 1793."
+const headlineSubtitle = document.getElementById("headlineSubtitle")
+let index = 0
+
+function typedLetters() {
+    if(index < subtitleLetters.length) {
+        headlineSubtitle.textContent += subtitleLetters.charAt(index)
+        index++
+        setTimeout(typedLetters, 70)
+    }
+}
+window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(typedLetters, 1500)
+})
+

@@ -8,6 +8,42 @@
     opacity: 0.6;
   }
 }
+@keyframes slideInUp {
+  from {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0%, 25%, 60%, 100% {
+    opacity: 0;
+  }
+  13%, 47%, 75% {
+    opacity: 1;
+  }
+}
+@keyframes appearsSlowly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes growsUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -19,18 +55,25 @@ body {
 }
 body a {
   text-decoration: none;
+  color: inherit;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .main-content {
   background: rgb(5, 3, 5);
-}
-
-.main-header {
-  background: rgb(10, 9, 10);
-  height: 6rem;
-}
-.main-header__menu {
-  color: white;
 }
 
 .main-header {
@@ -64,6 +107,41 @@ body a {
   cursor: pointer;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  height: 100%;
+  font-size: 1.1rem;
+  color: #a8a8a1;
+  border: 1px solid #191917;
+  background: linear-gradient(180deg, rgb(3, 3, 3) 27%, rgb(26, 25, 24) 92%);
+}
+footer #copyright {
+  position: absolute;
+  left: 17%;
+}
+footer .footer-logo {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 20px;
+  margin-top: 1rem;
+  position: absolute;
+  left: 47%;
+}
+footer .footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 55%;
+}
+footer .footer-nav-logo {
+  width: 1.4rem;
+  fill: #a8a8a1;
+  margin-top: 1rem;
+}
+
 .headline-wrapper {
   width: 100%;
   height: 50rem;
@@ -73,6 +151,7 @@ body a {
   border-top: 0.1rem solid wheat;
   border-bottom: 0.4rem solid wheat;
   margin-bottom: 1.5rem;
+  animation: appearsSlowly 1s ease-out forwards;
 }
 .headline-wrapper .headline {
   width: 50%;
@@ -87,16 +166,26 @@ body a {
 .headline-wrapper .headline__title {
   margin-top: 0;
   margin-bottom: 1.8rem;
-  font-size: 8rem;
+  font-size: 8.3rem;
   color: wheat;
   font-family: "Lora", "Montserrat", sans-serif;
   font-weight: 500;
+  opacity: 0;
+  animation: slideInUp 1.6s ease-in-out forwards;
 }
 .headline-wrapper .headline__subtitle {
   margin: 0;
   color: #59592e;
   font-size: 1.6rem;
   font-weight: 400;
+}
+.headline-wrapper .headline #headlineSubtitle::after {
+  content: "|";
+  animation: blink 2.7s ease-in-out forwards 2;
+  animation-delay: 0.6s;
+  margin-left: 5px;
+  color: #696937;
+  opacity: 0;
 }
 
 .nav-wrapper {
@@ -116,22 +205,29 @@ body a {
   color: rgb(240, 240, 226);
   font-size: 1.9rem;
   font-weight: 300;
+  transition: 0.2s ease-in-out;
+  animation: growsUp 0.6s ease-out;
+}
+.nav-wrapper .nav-filters__title:hover {
+  transform: scale(95%);
+  color: #d6d6b0;
 }
 .nav-wrapper .nav-filters__bar {
-  width: 1px;
+  width: 3px;
   height: 100%;
-  background: #aaaa5c;
-  opacity: 0;
+  background: #8b8b48;
+  border-radius: 20px;
   margin-right: 2.5rem;
-  transition: 0.5s;
-  animation: twinkle 1.5s linear infinite alternate-reverse;
+  transition: 0.3s;
+  animation: appearsSlowly 2.2s ease-in-out;
+  animation: twinkle 0.8s linear infinite alternate-reverse;
 }
 .nav-wrapper .nav-filters__bar:hover {
   height: 0%;
 }
 
 .article-container {
-  padding-block: 7rem;
+  padding-top: 7rem;
   padding-inline: 17%;
 }
 .article-container .bigcard {
@@ -140,27 +236,28 @@ body a {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto, auto;
   gap: 4rem;
-  margin-bottom: 17rem;
+  padding-bottom: 16rem;
 }
 .article-container .bigcard__img-wrapper {
   position: relative;
   width: 120%;
+  padding-bottom: 2rem;
 }
 .article-container .bigcard__img {
   width: 100%;
   border-radius: 1rem;
+  box-shadow: rgba(59, 59, 56, 0.329) 0px 18px 100px 20px;
 }
 .article-container .bigcard .arrow {
   position: absolute;
-  top: 90%;
+  top: 85%;
   transform: translateY(-50%);
   border: none;
   border-radius: 40%;
-  border: 2px solid white;
   font-size: 0.7rem;
-  padding: 0.6rem;
-  opacity: 0.2;
-  background: rgb(5, 3, 5);
+  padding: 0.7rem;
+  opacity: 0.3;
+  background: rgb(12, 12, 11);
   color: rgb(240, 240, 226);
   cursor: pointer;
   z-index: 10;
@@ -178,9 +275,9 @@ body a {
   align-items: center;
   text-align: center;
   gap: 2rem;
-  height: auto;
   padding-left: 9rem;
   padding-bottom: 1.5rem;
+  position: relative;
 }
 .article-container .bigcard__about__title {
   color: #fbf2e0;
@@ -202,12 +299,55 @@ body a {
   border: 1px solid rgba(190, 190, 154, 0.459);
   border-radius: 100px;
   padding-block: 1rem;
-  color: rgb(240, 240, 226);
-  background-color: rgb(12, 12, 11);
+  color: #e4e4ca;
+  background: linear-gradient(180deg, rgb(3, 3, 3) 27%, rgb(26, 25, 24) 92%);
   opacity: 0.85;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  bottom: 5%;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: 0.2s;
+}
+.article-container .bigcard__about__btn:hover {
+  background-color: #141412;
+  box-shadow: rgba(199, 207, 143, 0.473) 1px 1px 1px 0px inset, rgba(255, 255, 255, 0.274) -1px -1px 1px 1px inset;
+}
+
+.side-modal {
+  position: fixed;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(3, 3, 3) 27%, rgb(26, 25, 24) 92%);
+  color: rgb(240, 240, 226);
+  z-index: 1000;
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+  gap: 2rem;
+}
+.side-modal .side-modal.active {
+  left: 0;
+}
+.side-modal__close {
+  background: none;
+  border: none;
+  color: rgb(240, 240, 226);
+  font-size: 2rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.side-modal__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding-top: 2rem;
+}
+.side-modal__nav__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-top: auto;
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=home.css.map */

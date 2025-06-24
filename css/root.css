@@ -6,4 +6,40 @@
   to {
     opacity: 0.6;
   }
+}
+@keyframes slideInUp {
+  from {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0%, 25%, 60%, 100% {
+    opacity: 0;
+  }
+  13%, 47%, 75% {
+    opacity: 1;
+  }
+}
+@keyframes appearsSlowly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes growsUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=root.css.map */
