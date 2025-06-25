@@ -12,7 +12,7 @@
     <header class="main-header">
         <i class="fa-solid fa-bars main-header__menu" id="openMenu"></i>
         <img class="main-header__logo" src="img/klhausman-logo.png" alt="Logo Klhausman">
-        <i class="fa-solid fa-cart-shopping main-header__cart"></i> 
+        <i class="fa-solid fa-cart-shopping main-header__cart" id="openCartShop"></i> 
     </header>
     
     <main class="main-content">
@@ -110,6 +110,30 @@
             <a href="">Nos Awards</a>
         </nav>
     </aside>
+
+    <aside id="sideModalShop" class="side-modalShop">
+        <button id="closeCartShop" class="side-modalShop__close">&times;</button>
+        <div class="cart">
+            <h4 class="cart__title">Votre panier</h4>
+            <ul class="cart--items">
+                <li class="cart--items__item">
+                    <img src="img/gtr-acc.jpg" alt="votr produit" class="cart--items__item__img">
+                    <div class="items__details">
+                        <span class="items__details__name">Guitare accoustique</span>
+                        <span class="items__details__price">1 679 $</span>
+                        <button class="items__details__remove">Retirer du panier</button>
+                        <div class="items__details--separator"></div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="cart__summary">
+                <li class="cart__summary__tax">TVA : 2,4%</li>
+                <li class="cart__summary__total">Total : 1 719,29 $</li>
+                <button class="cart__checkout-btn">Commander</button>
+            </ul>
+        </div>
+    </aside>
+
     <script src="script.js"></script>
 </body>
 </html>

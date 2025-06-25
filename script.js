@@ -103,7 +103,7 @@ function typedLetters() {
     if(index < subtitleLetters.length) {
         headlineSubtitle.textContent += subtitleLetters.charAt(index)
         index++
-        setTimeout(typedLetters, 70)
+        setTimeout(typedLetters, 60)
     }
 }
 window.addEventListener("DOMContentLoaded", () => {
@@ -111,7 +111,7 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 
-// Side modale
+// Side modale menu
 const openMenu = document.getElementById("openMenu")
 const closeMenu = document.getElementById("closeModal")
 const sideModal = document.getElementById("sideModal")
@@ -129,5 +129,21 @@ closeMenu.addEventListener("click", () => {
 
 overlay.addEventListener("click", () => {
     sideModal.classList.remove("active")
+    overlay.classList.add("hidden")
+    sideModalShop.classList.remove("active")
+})
+
+// Side modale panier d'achat
+const openCartShop = document.getElementById("openCartShop")
+const closeCartShop = document.getElementById("closeCartShop")
+const sideModalShop = document.getElementById("sideModalShop")
+
+openCartShop.addEventListener("click", () => {
+    sideModalShop.classList.add("active")
+    overlay.classList.remove("hidden")
+})
+
+closeCartShop.addEventListener("click", () => {
+    sideModalShop.classList.remove("active")
     overlay.classList.add("hidden")
 })
