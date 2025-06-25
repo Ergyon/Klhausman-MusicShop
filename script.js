@@ -53,11 +53,20 @@ function updateSlider(sliderIndex) {
     const sliderData = sliders[sliderIndex]
     const currentIndex = currentIndexes[sliderIndex]
 
-    const img = document.getElementById(`imgSlider${sliderIndex}`)
-    const txt = document.getElementById(`txtSlider${sliderIndex}`)
 
-    img.src = sliderData[currentIndex].img
-    txt.textContent = sliderData[currentIndex].txt
+    const sliderImg = document.getElementById(`imgSlider${sliderIndex}`)
+    const sliderTxt = document.getElementById(`txtSlider${sliderIndex}`)
+
+    sliderImg.classList.remove("fade-in")
+    sliderTxt.classList.remove("fade-in-txt")
+    
+    void sliderImg.offsetWidth;
+    
+    sliderImg.src = sliderData[currentIndex].img
+    sliderTxt.textContent= sliderData[currentIndex].txt
+    
+    sliderImg.classList.add("fade-in")
+    sliderTxt.classList.add("fade-in-txt")
 }
 
 for (let i = 0; i < sliders.length; i++) {
@@ -65,6 +74,7 @@ for (let i = 0; i < sliders.length; i++) {
 }
 
 const arrows = document.querySelectorAll('.arrow')
+
 arrows.forEach(arrow => {
     arrow.addEventListener('click', () => {
         const sliderIndex = parseInt(arrow.dataset.slider)
@@ -87,7 +97,6 @@ arrows.forEach(arrow => {
 
 // Animation texte tape au clavier
 const subtitleLetters = "Un savoir-faire d'excellence et des instruments de prestige depuis 1793."
-const headlineSubtitle = document.getElementById("headlineSubtitle")
 let index = 0
 
 function typedLetters() {
@@ -101,3 +110,24 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(typedLetters, 1500)
 })
 
+
+// Side modale
+const openMenu = document.getElementById("openMenu")
+const closeMenu = document.getElementById("closeModal")
+const sideModal = document.getElementById("sideModal")
+const overlay = document.getElementById("overlay")
+
+openMenu.addEventListener("click", () => {
+    sideModal.classList.add("active")
+    overlay.classList.remove("hidden")
+})
+
+closeMenu.addEventListener("click", () => {
+    sideModal.classList.remove("active")
+    overlay.classList.add("hidden")
+} )
+
+overlay.addEventListener("click", () => {
+    sideModal.classList.remove("active")
+    overlay.classList.add("hidden")
+})
