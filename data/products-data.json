@@ -1,0 +1,40 @@
+{
+    "violons": [
+         {
+            "name": "Klhausman Stratacelli",
+            "img": "img/violons/violon.jpg",
+            "price": "12 349",
+            "wood": "épicéa",
+            "dimension": "4/4",
+            "weight": "387g",
+            "creator": "Antonio Stratacelli"
+        },
+        {
+            "name": "Klhausman Deluxe - Baroque",
+            "img": "img/violons/violon-dark-wood.jpg",
+            "price": "9 459",
+            "wood": "érable",
+            "dimension": "4/4",
+            "weight": "472g",
+            "creator": "Batholomé Mont-Satin"
+        },
+        {
+            "name": "Klhausman Benvici - Modern",
+            "img": "img/violons/violon-benevici-modern.jpg",
+            "price": "21 920",
+            "wood": "ébène",
+            "dimension": "4/4",
+            "weight": "306g",
+            "creator": "Archibalde De Bavoire & Leonardo Benvici"
+        },
+        {
+            "name": "De Bavoire II",
+            "img": "img/violons/violon-strings-zoom.jpg",
+            "price": "18 985",
+            "wood": "épicéa",
+            "dimension": "4/4",
+            "weight": "374g",
+            "creator": "Archibalde De Bavoire"
+        }
+    ]
+}

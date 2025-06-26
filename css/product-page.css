@@ -215,13 +215,14 @@ body {
   gap: 1rem;
   position: relative;
   max-width: 800px;
+  height: 600px;
   margin-bottom: 2.5rem;
 }
 .product__img {
   grid-column: 1/2;
   grid-row: 1/2;
   width: 600px;
-  height: auto;
+  height: 430px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;

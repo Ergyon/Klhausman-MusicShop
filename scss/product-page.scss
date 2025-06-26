@@ -43,12 +43,13 @@ body {
     gap: 1rem;
     position: relative;
     max-width: 800px;
+    height: 600px;
     margin-bottom: 2.5rem;
     &__img {
         grid-column: 1/2;
         grid-row: 1/2;
         width: 600px;
-        height: auto;
+        height: 430px;
         object-fit: cover;
         border-radius: 10px;
         box-shadow: rgba(180, 175, 175, 0.212) 2px 3px 10px 2px;

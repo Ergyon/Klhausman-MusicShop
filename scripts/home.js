@@ -1,4 +1,4 @@
-import {sliders} from '/scripts/sliders-data.js'
+import { sliders } from '/scripts/sliders-data.js'
 
 // Mettre a jour un slider
 const currentIndexes = [0, 0, 0]

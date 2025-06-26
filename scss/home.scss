@@ -5,7 +5,7 @@
 .headline-wrapper {
     width: 100%;
     height: 50rem;
-    background-image: url(/img/violon-zoom.jpg);
+    background-image: url(/img/violons/violon-zoom.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-top: 0.1rem solid $title-color;
@@ -98,11 +98,12 @@
         &__img-wrapper {
             position: relative;
             width: 120%;
-            // width: 700px;
             padding-bottom: 2rem;
+            width: 750px;
         }
         &__img {
             width: 100%;
+            object-fit: cover;
             border-radius: 1rem;
             box-shadow: rgba(59, 59, 56, 0.329) 0px 18px 100px 20px;
         }
@@ -141,7 +142,7 @@
             align-items: center;
             text-align: center;
             gap: 2rem;
-            padding-left: 9rem;
+            padding-left: 5rem;
             padding-bottom: 1.5rem;
             position: relative;
             &__title {
@@ -156,9 +157,9 @@
                 margin-bottom: auto;
             }
             &__btn {
-                @include btn(15rem, 4rem);
+                @include btn(15rem, 3.7rem);
                 position: absolute;
-                bottom: 5%;
+                bottom: 9%;
                 font-size: $btn-txt;
                 cursor: pointer;
                 transition: 0.2s;

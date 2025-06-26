@@ -2,46 +2,45 @@
 export const sliders = [
     [
         {
-            "img":"img/violons-group.jpg",
+            "img":"img/violons/violon-head.jpg",
             "txt":"Une petite descriptions plus ou moins longue selon mon inspi du moment"
         },
         {
-            "img":"img/violons-group-zoom.jpg",
+            "img":"img/violons/violons-group.jpg",
             "txt":"Une deuxieme petite descriptions peut-etre un peu moins longue selon mon inspi du moment"
         },
         {
-            "img":"img/violon-zoom-horizontal.jpg",
+            "img":"img/violons/violon-side-zoom.jpg",
             "txt":"Une troisieme petite descriptions beaucoup plus longue car je suis tres inspire regardez le nombre de mots que je vient d'ecrire c'est pas mal en vrai"
         }      
 
     ],
     [
         {
-            "img":"img/snare.jpg",
+            "img":"img/drums/snare.jpg",
             "txt":"Une petite descriptions plus ou moins longue selon mon inspi du moment"
         },
         {
-            "img":"img/drumsover.jpg",
+            "img":"img/drums/drumsover.jpg",
             "txt":"Une deuxieme petite descriptions peut-etre un peu moins longue selon mon inspi du moment"
         },
         {
-            "img":"img/ride.jpg",
+            "img":"img/drums/ride.jpg",
             "txt":"Une troisieme petite descriptions beaucoup plus longue car je suis tres inspire regardez le nombre de mots que je vient d'ecrire c'est pas mal en vrai"
         }  
     ],
     [
        {
-           "img":"img/piano-keys-black.jpg",
+           "img":"img/pianos/piano+mechanics.jpg",
            "txt":"Une petite descriptions plus ou moins longue selon mon inspi du moment"
        },
        {
-           "img":"img/piano-touch.jpg",
+           "img":"img/pianos/pianist2.jpg",
            "txt":"Une deuxieme petite descriptions peut-etre un peu moins longue selon mon inspi du moment"
        },
        {
-           "img":"img/piano-mechanics-zoom.jpg",
+           "img":"img/pianos/piano-mechanics-zoom.jpg",
            "txt":"Une troisieme petite descriptions beaucoup plus longue car je suis tres inspire regardez le nombre de mots que je vient d'ecrire c'est pas mal en vrai"
        }
     ]    
 ]
-
