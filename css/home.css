@@ -147,7 +147,6 @@ footer {
   height: 100%;
   font-size: 1.1rem;
   color: #a8a8a1;
-  border: 1px solid #191917;
   background: linear-gradient(180deg, rgb(3, 3, 3) 27%, rgb(26, 25, 24) 92%);
 }
 footer #copyright {
@@ -155,8 +154,8 @@ footer #copyright {
   left: 17%;
 }
 footer .footer-logo {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 20px;
   margin-top: 1rem;
   position: absolute;
@@ -169,9 +168,9 @@ footer .footer-nav {
   margin-left: 55%;
 }
 footer .footer-nav-logo {
-  width: 1.4rem;
+  width: 1.2rem;
   fill: #a8a8a1;
-  margin-top: 1rem;
+  margin-top: 0.7rem;
 }
 
 .headline-wrapper {
@@ -284,23 +283,32 @@ footer .footer-nav-logo {
 }
 .article-container .bigcard .arrow {
   position: absolute;
-  top: 85%;
-  transform: translateY(-50%);
   border: none;
   border-radius: 40%;
-  font-size: 0.7rem;
-  padding: 0.7rem;
-  opacity: 0.3;
+  height: 1.7rem;
+  width: 1.7rem;
+  padding: 6px;
+  opacity: 0.2;
   background: rgb(12, 12, 11);
+  fill: rgb(240, 240, 226);
   color: rgb(240, 240, 226);
   cursor: pointer;
   z-index: 10;
 }
 .article-container .bigcard #arrow-left {
-  left: 0.5rem;
+  left: 0.8rem;
+  top: 0.7rem;
+  transition: 0.2s ease;
+  display: none;
 }
 .article-container .bigcard #arrow-right {
-  right: 0.5rem;
+  right: 0.8rem;
+  top: 0.7rem;
+  transition: 0.2s ease;
+}
+.article-container .bigcard .arrow:hover {
+  transform: scale(1.2) rotate(360deg);
+  border: 1px solid wheat;
 }
 .article-container .bigcard__about {
   display: flex;
@@ -526,7 +534,6 @@ footer .footer-nav-logo {
   border-radius: 10px;
   border: none;
   box-shadow: rgba(138, 118, 6, 0.555) 0px 0px 2px 1px inset;
-  cursor: pointer;
 }
 .items__details--separator {
   width: 100%;

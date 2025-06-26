@@ -1,6 +1,5 @@
-
 // Sliders imgs and txts
-const sliders = [
+export const sliders = [
     [
         {
             "img":"img/violons-group.jpg",
@@ -45,3 +44,4 @@ const sliders = [
        }
     ]    
 ]
+

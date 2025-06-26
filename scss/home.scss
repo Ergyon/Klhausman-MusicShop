@@ -108,23 +108,33 @@
         }
         .arrow {
             position: absolute;
-            top: 85%;
-            transform: translateY(-50%);
             border: none;
             border-radius: 40%;
-            font-size: 0.7rem;
-            padding: 0.7rem;
-            opacity: 0.3;
+            height: 1.7rem;
+            width: 1.7rem;
+            padding: 6px;
+            opacity: 0.2;
             background: $btn-color;
+            fill: $txt-color;
             color: $txt-color;
             cursor: pointer;
             z-index: 10;
         }
         #arrow-left {
-            left: 0.5rem;
+            left: 0.8rem;
+            top: 0.7rem;
+            transition: 0.2s ease;
+            display: none;
         }
         #arrow-right {
-            right: 0.5rem;
+            right: 0.8rem;
+            top: 0.7rem;
+            transition: 0.2s ease;
+            
+        }
+    .arrow:hover {
+            transform: scale(1.2) rotate(360deg);
+            border: 1px solid wheat;
         }
         &__about {
             @include flex-center-columns;
@@ -333,7 +343,7 @@
         border-radius: 10px;
         border: none;
         box-shadow: rgba(138, 118, 6, 0.555) 0px 0px 2px 1px inset;
-        cursor: pointer;
+        // cursor: pointer;
     }
     &--separator {
         width: 100%;

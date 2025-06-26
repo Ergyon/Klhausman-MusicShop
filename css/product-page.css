@@ -171,4 +171,103 @@ footer .footer-nav-logo {
   width: 1.2rem;
   fill: #a8a8a1;
   margin-top: 0.7rem;
-}/*# sourceMappingURL=global.css.map */
+}
+
+body {
+  background: linear-gradient(360deg, rgb(3, 3, 3) 27%, rgb(26, 25, 24) 92%);
+}
+
+.headline-products {
+  background: linear-gradient(60deg, rgba(26, 22, 22, 0.774) 27%, rgba(39, 38, 38, 0.589) 92%);
+  border-top: 1px solid wheat;
+  border-bottom: 1px dashed wheat;
+  color: rgb(240, 240, 226);
+  text-align: center;
+  padding-inline: 10rem;
+  padding-bottom: 3rem;
+}
+.headline-products__title {
+  font-size: 3.2rem;
+  font-family: "Lora", "Montserrat", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 3rem;
+}
+.headline-products__text {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 7rem;
+  padding-left: 12%;
+  margin-right: 3%;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  position: relative;
+  max-width: 800px;
+  margin-bottom: 2.5rem;
+}
+.product__img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 600px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  box-shadow: rgba(180, 175, 175, 0.212) 2px 3px 10px 2px;
+}
+.product__name {
+  position: absolute;
+  top: -2.2rem;
+  left: 0;
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: 100;
+  font-family: "Lora", "Montserrat", sans-serif;
+  color: #fbf2e0;
+  margin-left: 0.5rem;
+  opacity: 0.9;
+}
+.product__btn--price {
+  position: absolute;
+  right: 27%;
+  top: -2rem;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #f8e8ca;
+  opacity: 0.6;
+}
+.product__btn--details {
+  color: rgb(240, 240, 226);
+  opacity: 0.9;
+  text-align: center;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 25px;
+  box-shadow: rgba(104, 102, 102, 0.363) 1px 1px 3px;
+  transition: 0.3s ease;
+}
+.product__btn--details:hover {
+  border: 1px dotted #4f4f29;
+  box-shadow: rgba(248, 249, 249, 0.563) 0px 1px 3px;
+  padding: 5px;
+  transform: scale(102%);
+  color: wheat;
+  opacity: 0.8;
+}/*# sourceMappingURL=product-page.css.map */
