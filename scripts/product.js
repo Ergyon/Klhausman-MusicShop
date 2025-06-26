@@ -24,7 +24,7 @@ function getCurrentCategory() {
     return null
 }
 
-// Afficher les produits
+// Creer et afficher les produits
 function displayProducts(products) {
     const container = document.querySelector(".products-container")
 
@@ -48,13 +48,76 @@ function displayProducts(products) {
         const details = document.createElement("span")
         details.classList.add("product__btn--details")
         details.textContent = "Voir la fiche"
+        details.setAttribute("data-name", product.name)
+        
+        // Creation de la modale details
+        const modal = createDetailsProduct(product)
 
         card.appendChild(img)
         card.appendChild(price)
         card.appendChild(name)
         card.appendChild(details)
+        card.appendChild(modal)
         container.appendChild(card)
+        
+        // Ouvrir et fermer la modale details
+        details.addEventListener("click", () => {
+            modal.classList.remove("hidden")
+        })
+        
+        const closeBtn = modal.querySelector(".details-modal--closebtn")
+
+        closeBtn.addEventListener("click", () => {
+            modal.classList.add("hidden")
+        })
     })
+}
+
+// Creation modale fiche produit
+function createDetailsProduct(product) {
+    const wrapper = document.createElement("div")
+    wrapper.classList.add("hidden", "details-wrapper")
+
+    const modal = document.createElement("div")
+    modal.classList.add("details-modal")
+
+    const closeBtn = document.createElement("button")
+    closeBtn.classList.add("details-modal--closebtn")
+
+    const title = document.createElement("h3")
+    title.classList.add("details-modal__name")
+    title.textContent = product.name
+
+    const table = document.createElement("table")
+    table.classList.add("details-modal__table")
+
+    const details = [
+        {label: "Bois", value: product.wood},
+        {label: "Dimensions", value: product.dimension},
+        {label: "Poids", value: product.weight},
+        {label: "Créateur", value: product.creator},
+    ]
+
+    details.forEach(detail => {
+        const row = document.createElement("tr")
+
+        const th = document.createElement("th")
+        th.textContent = detail.label
+
+        const td = document.createElement("td")
+        td.textContent = detail.value
+
+        row.appendChild(th)
+        row.appendChild(td)
+        table.appendChild(row)
+    })
+
+    modal.appendChild(closeBtn)
+    modal.appendChild(title)
+    modal.appendChild(table)
+    wrapper.appendChild(modal)
+
+    return wrapper
 }
 
 // Initialisation
