@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes slideDownHeader {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
 @keyframes twinkle {
   from {
     opacity: 0;
@@ -54,21 +64,51 @@
 }
 @keyframes unfoldTop {
   from {
-    height: 20%;
-    opacity: 0.1;
+    transform: scaleY(0);
+    opacity: 0.2;
   }
   to {
-    height: 100%;
+    transform: scaleY(1);
     opacity: 1;
   }
 }
 @keyframes unfoldBottom {
   from {
-    transform: translateY(12px);
+    transform: translateY(10px);
     opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInUpDetails {
+  from {
+    transform: scaleY(0.5);
+    opacity: 0.2;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes slideDownDetails {
+  from {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@keyframes zoomInImage {
+  from {
+    width: 20%;
+    opacity: 0;
+  }
+  to {
+    width: 50%;
     opacity: 1;
   }
 }
@@ -110,7 +150,7 @@ body a {
 
 .main-header {
   background: rgb(10, 9, 10);
-  height: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -120,6 +160,8 @@ body a {
   color: rgb(240, 240, 226);
   font-size: 1.5rem;
   padding-top: 1.3rem;
+  animation: slideDownHeader 1.3s ease-in-out forwards;
+  transform-origin: top;
 }
 .main-header__menu:hover {
   cursor: pointer;
@@ -129,11 +171,15 @@ body a {
   height: auto;
   border-radius: 100px;
   padding-block: 0.5rem;
+  animation: slideDownHeader 2s ease-in-out forwards;
+  transform-origin: top;
 }
 .main-header__cart {
   color: rgb(240, 240, 226);
   font-size: 1.5rem;
   padding-top: 1.3rem;
+  animation: slideDownHeader 0.8s ease-in-out forwards;
+  transform-origin: top;
 }
 .main-header__cart:hover {
   cursor: pointer;
@@ -216,7 +262,12 @@ body {
   position: relative;
   max-width: 800px;
   height: 600px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 6rem;
+  transition: 0.3s ease-in-out;
+}
+.product:hover {
+  gap: 1.6rem;
+  margin-top: 0.4rem;
 }
 .product__img {
   grid-column: 1/2;
@@ -227,6 +278,13 @@ body {
      object-fit: cover;
   border-radius: 10px;
   box-shadow: rgba(180, 175, 175, 0.212) 2px 3px 10px 2px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.product__img:hover {
+  margin-block: 0.8rem;
+  transform: scale(102%);
+  box-shadow: rgba(180, 175, 175, 0.322) 0px 3px 30px 0px;
 }
 .product__name {
   position: absolute;
@@ -257,7 +315,6 @@ body {
   grid-row: 2/3;
   font-size: 1.1rem;
   font-weight: 300;
-  margin-bottom: 6rem;
   cursor: pointer;
   padding: 4px;
   border-radius: 25px;
@@ -271,4 +328,128 @@ body {
   transform: scale(102%);
   color: wheat;
   opacity: 0.8;
+}
+.product__btn--addCart {
+  color: rgb(240, 240, 226);
+  opacity: 0.9;
+  text-align: center;
+  grid-column: 1/2;
+  grid-row: 3/3;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 7rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 25px;
+  box-shadow: rgba(104, 102, 102, 0.363) 1px 1px 3px;
+  transition: 0.3s ease;
+}
+.product__btn--addCart:hover {
+  border-bottom: 1px dotted #4f4f29;
+  box-shadow: rgba(248, 249, 249, 0.563) 0px 1px 3px;
+  padding: 5px;
+  transform: scale(102%);
+  color: wheat;
+  opacity: 0.8;
+}
+
+.details-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 600px;
+  height: 430px;
+}
+
+.details-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(rgb(31, 31, 23) 14%, rgb(48, 48, 46) 85%);
+  padding-inline: 2rem;
+  border-radius: 10px;
+  transform-origin: bottom;
+}
+.details-modal--closebtn {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  border: none;
+  background: none;
+  color: rgb(240, 240, 226);
+  opacity: 0.8;
+  font-size: 1.2rem;
+  box-shadow: rgba(84, 87, 87, 0.712) 1px 1px 40px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.details-modal__name {
+  font-size: 1.4rem;
+  color: rgb(240, 240, 226);
+  font-weight: 300;
+  max-width: 200px;
+}
+.details-modal__table {
+  width: 300px;
+  border-collapse: separate;
+  box-shadow: rgba(223, 212, 212, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.details-modal__table, .details-modal tr {
+  border: 1px solid rgba(160, 138, 110, 0.205);
+  border-radius: 10px;
+}
+.details-modal__table, .details-modal td {
+  color: rgb(240, 240, 226);
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 10px;
+  margin-left: auto;
+}
+.details-modal__table, .details-modal th {
+  color: #dfdfc0;
+  font-size: 1.1rem;
+  font-weight: 200;
+  padding-right: 1.6rem;
+}
+
+.slideUpTable {
+  animation: slideInUpDetails 0.4s ease-out forwards;
+}
+
+.slideDownTable {
+  animation: slideDownDetails 0.4s ease forwards;
+}
+
+.img-fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(46, 43, 43, 0.781);
+  animation: zoomInImage 0.4s ease-out forwards;
+}
+
+.overlay-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(32, 32, 32, 0.226);
+  animation: appearsSlowly 0.5s ease forwards;
+  z-index: 1000;
+  opacity: 0;
 }/*# sourceMappingURL=product-page.css.map */

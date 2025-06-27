@@ -3,38 +3,148 @@
          {
             "name": "Klhausman Stratacelli",
             "img": "img/violons/violon.jpg",
-            "price": "12 349",
+            "price": "21 989",
             "wood": "épicéa",
             "dimension": "4/4",
             "weight": "387g",
-            "creator": "Antonio Stratacelli"
+            "creator": "Antonio Stratacelli",
+            "id": "1",
+            "new": false,
+            "popular": false,
+            "unique": true
         },
         {
             "name": "Klhausman Deluxe - Baroque",
             "img": "img/violons/violon-dark-wood.jpg",
-            "price": "9 459",
+            "price": "11 350",
             "wood": "érable",
             "dimension": "4/4",
             "weight": "472g",
-            "creator": "Batholomé Mont-Satin"
+            "creator": "Batholomé Mont-Satin",
+            "id": "2",
+            "new": true,
+            "popular": true,
+            "unique": false
         },
         {
             "name": "Klhausman Benvici - Modern",
             "img": "img/violons/violon-benevici-modern.jpg",
-            "price": "21 920",
+            "price": "14 749",
             "wood": "ébène",
             "dimension": "4/4",
             "weight": "306g",
-            "creator": "Archibalde De Bavoire & Leonardo Benvici"
+            "creator": "Archibalde De Bavoire & Leonardo Benvici",
+            "id": "3",
+            "new": false,
+            "popular": true,
+            "unique": false
         },
         {
             "name": "De Bavoire II",
             "img": "img/violons/violon-strings-zoom.jpg",
-            "price": "18 985",
+            "price": "18 685",
             "wood": "épicéa",
             "dimension": "4/4",
             "weight": "374g",
-            "creator": "Archibalde De Bavoire"
+            "creator": "Archibalde De Bavoire",
+            "id": "4",
+            "new": true,
+            "popular": false,
+            "unique": true
+        }
+    ],
+
+    "pianos": [
+        {
+            "name": "Klhausman Athena",
+            "img": "img/pianos/piano+mechanics2.jpg",
+            "price": "61 675",
+            "wood": "acajou",
+            "dimension": "1m94",
+            "weight": "117kg",
+            "creator": "Archibalde De Bavoire",
+            "id": "1",
+            "new": false,
+            "popular": true,
+            "unique": false
+        },
+        {
+            "name": "Acacias Mont-Satin 2",
+            "img": "img/pianos/piano-a-queue-marron.jpg",
+            "price": "42 820",
+            "wood": "acacias",
+            "dimension": "2m06 x 1m57",
+            "weight": "146kg",
+            "creator": "Batholomé Mont-Satin",
+            "id": "2",
+            "new": false,
+            "popular": true,
+            "unique": false
+        },
+        {
+            "name": "Klhausman Historia",
+            "img": "img/pianos/piano-a-queue.jpg",
+            "price": "84 799",
+            "wood": "acacias",
+            "dimension": "2m02 x 1m51",
+            "weight": "162kg",
+            "creator": "Leonardo Benvici",
+            "id": "3",
+            "new": true,
+            "popular": false,
+            "unique": true
+        },
+        {
+            "name": "Klhausman Deluxe White",
+            "img": "img/pianos/piano-a-queue-blanc.jpg",
+            "price": "48 327",
+            "wood": "chêne",
+            "dimension": "1m98 x 1m49",
+            "weight": "133kg",
+            "creator": "Batholomé Mont-Satin",
+            "id": "4",
+            "new": false,
+            "popular": true,
+            "unique": false
+        },
+         {
+            "name": "Klhausman Royal",
+            "img": "img/pianos/piano-keys-royal.png",
+            "price": "140 900",
+            "wood": "chêne",
+            "dimension": "1m89 x 1m47",
+            "weight": "121kg",
+            "creator": "Archibalde De Bavoire",
+            "id": "5",
+            "new": true,
+            "popular": false,
+            "unique": true
+        },
+         {
+            "name": "Klhausman Analog S3",
+            "img": "img/pianos/piano-elec-rouge.jpg",
+            "price": "10 650",
+            "wood": "érable",
+            "dimension": "1m73 x 20.1cm",
+            "weight": "2.4kg",
+            "creator": "Antonio Stratacelli",
+            "id": "5",
+            "new": false,
+            "popular": true,
+            "unique": false
+        },
+             {
+            "name": "Klhausman Analog S1",
+            "img": "img/pianos/piano-elec-marron.jpg",
+            "price": "8 370",
+            "wood": "érable",
+            "dimension": "1m77 x 18.6cm",
+            "weight": "2.8kg",
+            "creator": "Antonio Stratacelli",
+            "id": "6",
+            "new": true,
+            "popular": true,
+            "unique": false
         }
     ]
 }

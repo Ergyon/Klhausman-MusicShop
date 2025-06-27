@@ -53,6 +53,15 @@ $subtitle-weight: 300;
 }
 
 // Keyframes
+@keyframes slideDownHeader {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    } to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
 @keyframes twinkle {
     from {
         opacity: 0;
@@ -100,19 +109,48 @@ $subtitle-weight: 300;
 }
 @keyframes unfoldTop {
     from {
-        height: 20%;
-        opacity: 0.1;
+        transform: scaleY(0);
+        opacity: 0.2;
     } to {
-        height: 100%;
+        transform: scaleY(1);
         opacity: 1;
     }
 }
 @keyframes unfoldBottom {
     from {
-        transform: translateY(12px);
+        transform: translateY(10px);
         opacity: 0;
     } to {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideInUpDetails {
+    from {
+        transform:  scaleY(0.5);
+        opacity: 0.2;
+    } to {
+        transform: scaleY(1);
+        opacity: 1;
+        
+    }
+}
+@keyframes slideDownDetails {
+    from {
+        transform: scaleY(1);
+        opacity: 1;
+    } to {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+}
+@keyframes zoomInImage {
+    from {
+        width: 20%;
+        opacity: 0;
+    }
+    to {
+        width: 50%;
         opacity: 1;
     }
 }

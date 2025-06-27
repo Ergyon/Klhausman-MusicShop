@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes slideDownHeader {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
 @keyframes twinkle {
   from {
     opacity: 0;
@@ -54,21 +64,51 @@
 }
 @keyframes unfoldTop {
   from {
-    height: 20%;
-    opacity: 0.1;
+    transform: scaleY(0);
+    opacity: 0.2;
   }
   to {
-    height: 100%;
+    transform: scaleY(1);
     opacity: 1;
   }
 }
 @keyframes unfoldBottom {
   from {
-    transform: translateY(12px);
+    transform: translateY(10px);
     opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInUpDetails {
+  from {
+    transform: scaleY(0.5);
+    opacity: 0.2;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes slideDownDetails {
+  from {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@keyframes zoomInImage {
+  from {
+    width: 20%;
+    opacity: 0;
+  }
+  to {
+    width: 60%;
     opacity: 1;
   }
 }
@@ -110,7 +150,7 @@ body a {
 
 .main-header {
   background: rgb(10, 9, 10);
-  height: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -120,6 +160,8 @@ body a {
   color: rgb(240, 240, 226);
   font-size: 1.5rem;
   padding-top: 1.3rem;
+  animation: slideDownHeader 1.3s ease-in-out forwards;
+  transform-origin: top;
 }
 .main-header__menu:hover {
   cursor: pointer;
@@ -129,11 +171,15 @@ body a {
   height: auto;
   border-radius: 100px;
   padding-block: 0.5rem;
+  animation: slideDownHeader 2s ease-in-out forwards;
+  transform-origin: top;
 }
 .main-header__cart {
   color: rgb(240, 240, 226);
   font-size: 1.5rem;
   padding-top: 1.3rem;
+  animation: slideDownHeader 0.8s ease-in-out forwards;
+  transform-origin: top;
 }
 .main-header__cart:hover {
   cursor: pointer;
