@@ -54,6 +54,10 @@ function displayProducts(products) {
         addCartBtn.classList.add("product__btn--addCart")
         addCartBtn.textContent = "Sélectionner ce produit"
         addCartBtn.setAttribute("data-name", product.name)
+
+        addCartBtn.addEventListener("click", () => {
+            addToCart(product)
+        })
         
         // Creation de la modale details
         const modalWrapper = createDetailsProduct(product)
@@ -139,6 +143,7 @@ function createDetailsProduct(product) {
     return wrapper
 }
 
+// Afficher image plein ecran
 function showFullScreenImage(imgSrc, altText) {
     const existingOverlay = document.querySelector(".overlay-fullscreen")
     if (existingOverlay) 
@@ -158,6 +163,51 @@ function showFullScreenImage(imgSrc, altText) {
     overlay.addEventListener("click", () => {
         overlay.remove()
     })  
+}
+
+// Creer liste produit dans le panier
+function addToCart(product) {
+    const cartItemsList = document.querySelector(".cart--items")
+    
+    const cartItem = document.createElement("li")
+    cartItem.classList.add("cart--items__item")
+
+    const imgItemShop = document.createElement("img")
+    imgItemShop.classList.add("cart--items__item__img")
+    imgItemShop.src = product.img
+    imgItemShop.alt = product.name
+
+    const itemsInfos = document.createElement("div")
+    itemsInfos.classList.add("items__details")
+
+    const nameItemshop = document.createElement("span")
+    nameItemshop.classList.add("items__details__name")
+    nameItemshop.textContent = product.name
+
+    const priceItemShop = document.createElement("span")
+    priceItemShop.classList.add("items__details__price")
+    priceItemShop.textContent = product.price + " $"
+
+    const removeItemShop = document.createElement("button")
+    removeItemShop.classList.add("items__details__remove")
+    removeItemShop.textContent = "Retirer du panier"
+
+    const lineSeparator = document.createElement("div")
+    lineSeparator.classList.add("items__details--separator")
+
+    itemsInfos.appendChild(nameItemshop)
+    itemsInfos.appendChild(priceItemShop)
+    itemsInfos.appendChild(removeItemShop)
+    itemsInfos.appendChild(lineSeparator)
+    
+    cartItem.appendChild(imgItemShop)
+    cartItem.appendChild(itemsInfos)
+    cartItemsList.appendChild(cartItem)
+
+    // Retirer du panier
+    removeItemShop.addEventListener("click", () => {
+        cartItem.remove()
+    })
 }
 
 // Initialisation

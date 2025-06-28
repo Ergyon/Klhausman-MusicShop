@@ -276,8 +276,8 @@
     position: absolute;
     width: 100%;
     top: 1.5rem;
-    padding-inline: 2rem;
-    padding-bottom: 0.8rem;
+    // padding-inline: 2rem;
+    padding-bottom: 1.4rem;
     text-align: center;
     border-bottom: 1px solid whitesmoke;
     &__title {
@@ -285,10 +285,13 @@
         font-weight: 200;
     }
     &__summary {
-        font-size: 14px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: flex-start;
+        // padding-left: 3.5rem;
+        font-size: 14px;
+        font-weight: 200;
         gap: 6px;
         list-style: none;
     }
@@ -307,16 +310,23 @@
     }
 }
 .cart--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     &__item {
-        @include flex-center-columns;
+        // @include flex-center-columns;
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 2rem;
         list-style: none;
-        gap: 1rem;
+        padding-bottom: 3rem;
         &__img {
             display: block;
-            width: 100%;
-            height: 100px;
+            width: 120px;
+            height: 90px;
             object-fit: cover;
-            padding-right: 2rem;
+            border-radius: 10px;
+            margin-right: 2rem;
             // margin: auto;
         }
     }
@@ -324,35 +334,38 @@
 .items__details {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    align-items: flex-start;
     color: $txt-color;
     &__name {
         font-weight: 300;
         color: $txt-color;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
     }
     &__price {
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 200;
         padding-bottom: 0.8rem;
     }
     &__remove {
-        width: 7rem;
+        width: 6rem;
         font-size: 0.7rem;
-        margin-left: 30%;
+        font-weight: 100;
         background-color: lighten($bg-main-color, 5%);;
         color: darken($txt-color, 10%);
-        padding: 7px;
-        border-radius: 10px;
+        padding: 6px;
+        text-align: center;
+        border-radius: 15px;
         border: none;
         box-shadow: rgba(138, 118, 6, 0.555) 0px 0px 2px 1px inset;
-        // cursor: pointer;
+        padding-top: 0.5rem;
+        cursor: pointer;
     }
     &--separator {
         width: 100%;
         height: 1px;
         background-color: darken($txt-color, 20%);
         animation: twinkle 1.7s alternate-reverse infinite;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 }

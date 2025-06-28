@@ -108,7 +108,7 @@
     opacity: 0;
   }
   to {
-    width: 60%;
+    width: 50%;
     opacity: 1;
   }
 }
@@ -155,6 +155,8 @@ body a {
   justify-content: space-between;
   align-items: flex-start;
   padding-inline: 1rem;
+  animation: appearsSlowly 0.3s ease forwards 0.3s;
+  opacity: 0;
 }
 .main-header__menu {
   color: rgb(240, 240, 226);
@@ -193,7 +195,10 @@ footer {
   height: 100%;
   font-size: 1.1rem;
   color: #a8a8a1;
+  border: 1px solid #191917;
   background: linear-gradient(180deg, rgb(3, 3, 3) 27%, rgb(26, 25, 24) 92%);
+  animation: appearsSlowly 0.6s ease-in-out forwards 0.4s;
+  opacity: 0;
 }
 footer #copyright {
   position: absolute;

@@ -46,6 +46,8 @@ body {
     height: 600px;
     margin-bottom: 6rem;
     transition: 0.3s ease-in-out;
+    opacity: 0;
+    animation: slideInUp 0.7s ease-out forwards 0.3s;
     &:hover {
         gap: 1.6rem;
         margin-top: 0.4rem;
