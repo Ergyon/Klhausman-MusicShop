@@ -20,7 +20,7 @@
             "wood": "érable",
             "dimension": "4/4",
             "weight": "472g",
-            "creator": "Batholomé Mont-Satin",
+            "creator": "Bartholomé Mont-Satin",
             "id": "2",
             "new": true,
             "popular": true,
@@ -75,7 +75,7 @@
             "wood": "acacias",
             "dimension": "2m06 x 1m57",
             "weight": "146kg",
-            "creator": "Batholomé Mont-Satin",
+            "creator": "Bartholomé Mont-Satin",
             "id": "2",
             "new": false,
             "popular": true,
@@ -101,7 +101,7 @@
             "wood": "chêne",
             "dimension": "1m98 x 1m49",
             "weight": "133kg",
-            "creator": "Batholomé Mont-Satin",
+            "creator": "Bartholomé Mont-Satin",
             "id": "4",
             "new": false,
             "popular": true,
@@ -133,7 +133,7 @@
             "popular": true,
             "unique": false
         },
-             {
+        {
             "name": "Klhausman Analog S1",
             "img": "img/pianos/piano-elec-marron.jpg",
             "price": 8370,
@@ -144,6 +144,155 @@
             "id": "6",
             "new": true,
             "popular": true,
+            "unique": false
+        }
+    ], 
+
+    "guitares": [
+        {
+            "name": "Klhausman F-68",
+            "img": "img/guitares/gtr-acc-shadow.jpg",
+            "price": 6899,
+            "wood": "cèdre",
+            "dimension": "4/4",
+            "weight": "2.1kg",
+            "creator": "Marianne De Bavoire",
+            "id": "1",
+            "new": false,
+            "popular": false,
+            "unique": true
+        },
+        {
+            "name": "Telecaster Mont-Satin Black",
+            "img": "img/guitares/gtr-elec-black.jpg",
+            "price": 4355,
+            "wood": "mohagony",
+            "dimension": "4/4",
+            "weight": "2.9kg",
+            "creator": "Antonio Stratacelli",
+            "id": "2",
+            "new": false,
+            "popular": true,
+            "unique": false
+        },
+        {
+            "name": "Klhausman Stratocaster M.P",
+            "img": "img/guitares/gtr-elec-strat-floyd.jpg",
+            "price": 8249,
+            "wood": "mohagony",
+            "dimension": "4/4",
+            "weight": "1.8kg",
+            "creator": "Madeleine Proust",
+            "id": "3",
+            "new": false,
+            "popular": false,
+            "unique": false
+        },
+        {
+            "name": "Klhausman LP-Primus",
+            "img": "img/guitares/gtr-elec-lp2.jpg",
+            "price": 12500,
+            "wood": "acajou",
+            "dimension": "4/4",
+            "weight": "3.3kg",
+            "creator": "Archibalde De Bavoire",
+            "id": "4",
+            "new": false,
+            "popular": false,
+            "unique": true
+        },
+        {
+            "name": "Jazz Deluxe 68",
+            "img": "img/guitares/guitare-jazz-marron.jpg",
+            "price": 7420,
+            "wood": "cèdre",
+            "dimension": "4/4",
+            "weight": "2.7kg",
+            "creator": "Leonardo Benvici",
+            "id": "5",
+            "new": true,
+            "popular": true,
+            "unique": false
+        }
+    ],
+
+    "drums": [
+        {
+            "name": "Klhausman MP-2",
+            "img": "img/drums/toms.jpg",
+            "price": 11700,
+            "wood": "cèdre",
+            "dimension": "4/4",
+            "weight": "2.1kg",
+            "creator": "Madeleine Proust",
+            "id": "1",
+            "new": true,
+            "popular": false,
+            "unique": true
+        },
+        {
+            "name": "Klhausman Stratacelli Tiger",
+            "img": "img/drums/drums-tiger-black.jpg",
+            "price": 8430,
+            "wood": "cèdre",
+            "dimension": "4/4",
+            "weight": "2.1kg",
+            "creator": "Antonio Stratacelli",
+            "id": "1",
+            "new": false,
+            "popular": false,
+            "unique": false
+        },
+        {
+            "name": "Klhausman Gold 60s",
+            "img": "img/drums/drums-gold.jpg",
+            "price": 10689,
+            "wood": "cèdre",
+            "dimension": "4/4",
+            "weight": "2.1kg",
+            "creator": "Madeleine Proust",
+            "id": "1",
+            "new": true,
+            "popular": false,
+            "unique": true
+        },
+        {
+            "name": "Klhausman Emerauld BV",
+            "img": "img/drums/drums-green.jpg",
+            "price": 16670,
+            "wood": "cèdre",
+            "dimension": "4/4",
+            "weight": "2.1kg",
+            "creator": "Leonardo Benvici",
+            "id": "1",
+            "new": false,
+            "popular": true,
+            "unique": true
+        },
+        {
+            "name": "Klhausman Deluxe 86",
+            "img": "img/drums/drums-marron.jpg",
+            "price": 9119,
+            "wood": "cèdre",
+            "dimension": "4/4",
+            "weight": "2.1kg",
+            "creator": "Marianne De Bavoire",
+            "id": "1",
+            "new": false,
+            "popular": true,
+            "unique": false
+        },
+        {
+            "name": "Klhausman Saphir 2",
+            "img": "img/drums/drum-toms-blue.jpg",
+            "price": 14839,
+            "wood": "cèdre",
+            "dimension": "4/4",
+            "weight": "2.1kg",
+            "creator": "Archibalde De Bavoire",
+            "id": "1",
+            "new": true,
+            "popular": false,
             "unique": false
         }
     ]

@@ -102,10 +102,9 @@
         <button id="closeModal" class="side-modal__close">&times;</button>
         <nav class="side-modal__nav">
             <a href="violons.html">Violons</a>
-            <a href="">Violoncelles</a>
-            <a href="">Guitares accoustiques</a>
-            <a href="">Guitares électriques</a>
             <a href="pianos.html">Pianos</a>
+            <a href="guitares.html">Guitares</a>
+            <a href="drums.html">Batteries</a>
         </nav>
         <div class="side-modal__nav--line"></div>
         <nav class="side-modal__nav__bottom">
@@ -123,8 +122,9 @@
                 
             </ul>
             <ul class="cart__summary">
-                <li class="cart__summary__tax">TVA : 2,4%</li>
-                <li class="cart__summary__total">Total : 1 719,29 $</li>
+                <button id="removeAll" class="cart__checkout-btn">Vider le panier</button>
+                <li id="tax" class="cart__summary__tax"></li>
+                <li id="total" class="cart__summary__total"></li>
                 <button class="cart__checkout-btn">Commander</button>
             </ul>
         </div>
