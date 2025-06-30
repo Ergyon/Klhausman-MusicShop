@@ -359,6 +359,10 @@ body {
   color: wheat;
   opacity: 0.8;
 }
+.product__btn--addCart--checked {
+  color: rgb(12, 12, 11);
+  background: #7f5811;
+}
 
 .details-wrapper {
   position: absolute;

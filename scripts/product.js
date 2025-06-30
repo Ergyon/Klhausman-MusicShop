@@ -39,7 +39,7 @@ function displayProducts(products) {
 
         const price = document.createElement("span")
         price.classList.add("product__btn--price")
-        price.textContent = product.price + " $"
+        price.textContent = product.price.toLocaleString("fr-FR") + " $"
 
         const name = document.createElement("span")
         name.classList.add("product__name")
@@ -56,7 +56,7 @@ function displayProducts(products) {
         addCartBtn.setAttribute("data-name", product.name)
 
         addCartBtn.addEventListener("click", () => {
-            addToCart(product)
+            addToCart(product, addCartBtn)
         })
         
         // Creation de la modale details
@@ -166,9 +166,12 @@ function showFullScreenImage(imgSrc, altText) {
 }
 
 // Creer liste produit dans le panier
-function addToCart(product) {
+let cart = []
+const cartSummary = document.querySelector(".cart__summary")
+
+function addToCart(product, addCartBtn) {
     const cartItemsList = document.querySelector(".cart--items")
-    
+      
     const cartItem = document.createElement("li")
     cartItem.classList.add("cart--items__item")
 
@@ -186,11 +189,11 @@ function addToCart(product) {
 
     const priceItemShop = document.createElement("span")
     priceItemShop.classList.add("items__details__price")
-    priceItemShop.textContent = product.price + " $"
+    priceItemShop.textContent = product.price.toLocaleString("fr-FR") + " $"
 
     const removeItemShop = document.createElement("button")
     removeItemShop.classList.add("items__details__remove")
-    removeItemShop.textContent = "Retirer du panier"
+    removeItemShop.textContent = "Retirer"
 
     const lineSeparator = document.createElement("div")
     lineSeparator.classList.add("items__details--separator")
@@ -204,10 +207,64 @@ function addToCart(product) {
     cartItem.appendChild(itemsInfos)
     cartItemsList.appendChild(cartItem)
 
+    // push le porduit dans le panier
+    cart.push(product)
+    cartSummary.classList.remove("hidden")
+    updateTotal()
+
+    // produit checked
+    addCartBtn.innerHTML ="Ajouté au panier"
+    addCartBtn.classList.add("product__btn--addCart--checked")
+
     // Retirer du panier
     removeItemShop.addEventListener("click", () => {
         cartItem.remove()
+        addCartBtn.classList.remove("product__btn--addCart--checked")
+        addCartBtn.innerHTML = "Sélectionner ce produit"
+        
+        const index = cart.indexOf(product)
+        if (index !== -1) {
+            cart.splice(index, 1)
+        }
+        
+        updateTotal()
+        localStorage.setItem("cart", JSON.stringify(cart))
     })
+    
+    // Tout retirer du panier
+    removeAll.addEventListener("click", () => {
+        cartItemsList.innerHTML = ""
+        cart = []
+
+        const allBtnsChecked = document.querySelectorAll(".product__btn--addCart")
+        allBtnsChecked.forEach((btn) => {
+            btn.classList.remove("product__btn--addCart--checked")
+            btn.textContent = "Sélectionner ce produit"
+        })
+
+        updateTotal()
+        localStorage.removeItem("cart")
+    })
+
+    localStorage.setItem("cart", JSON.stringify(cart))
+}
+
+// Calculer total panier
+function updateTotal() {
+    const tax = document.getElementById("tax")
+    const totalContent = document.getElementById("total")
+    let total = 0
+    
+    cart.forEach(product => {
+        total += product.price
+    })
+    
+    tax.innerHTML = "TVA : 2,4%"
+    totalContent.innerHTML = "Total : " + total.toLocaleString("fr-FR") + " $"
+    
+    if (cart.length === 0) {
+        cartSummary.classList.add("hidden")
+    }
 }
 
 // Initialisation
@@ -221,6 +278,17 @@ async function init() {
     }
 
     displayProducts(data[category])
+
+    // Recharger le panier et les produits selectionnes 
+    const storedCart = JSON.parse(localStorage.getItem("cart"))
+    if (storedCart && Array.isArray(storedCart)) {
+        storedCart.forEach((product) => {
+            const addCartBtn = document.querySelector(`.product__btn--addCart[data-name="${product.name}"]`)
+            if (addCartBtn) {
+                addToCart(product, addCartBtn)
+            }
+        })
+    }
 }
 
 init()

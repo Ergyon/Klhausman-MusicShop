@@ -3,7 +3,7 @@
          {
             "name": "Klhausman Stratacelli",
             "img": "img/violons/violon.jpg",
-            "price": "21 989",
+            "price": 21989,
             "wood": "épicéa",
             "dimension": "4/4",
             "weight": "387g",
@@ -16,7 +16,7 @@
         {
             "name": "Klhausman Deluxe - Baroque",
             "img": "img/violons/violon-dark-wood.jpg",
-            "price": "11 350",
+            "price": 11350,
             "wood": "érable",
             "dimension": "4/4",
             "weight": "472g",
@@ -29,7 +29,7 @@
         {
             "name": "Klhausman Benvici - Modern",
             "img": "img/violons/violon-benevici-modern.jpg",
-            "price": "14 749",
+            "price": 14749,
             "wood": "ébène",
             "dimension": "4/4",
             "weight": "306g",
@@ -42,7 +42,7 @@
         {
             "name": "De Bavoire II",
             "img": "img/violons/violon-strings-zoom.jpg",
-            "price": "18 685",
+            "price": 18685,
             "wood": "épicéa",
             "dimension": "4/4",
             "weight": "374g",
@@ -58,7 +58,7 @@
         {
             "name": "Klhausman Athena",
             "img": "img/pianos/piano+mechanics2.jpg",
-            "price": "61 675",
+            "price": 61675,
             "wood": "acajou",
             "dimension": "1m94",
             "weight": "117kg",
@@ -71,7 +71,7 @@
         {
             "name": "Acacias Mont-Satin 2",
             "img": "img/pianos/piano-a-queue-marron.jpg",
-            "price": "42 820",
+            "price": 42820,
             "wood": "acacias",
             "dimension": "2m06 x 1m57",
             "weight": "146kg",
@@ -84,7 +84,7 @@
         {
             "name": "Klhausman Historia",
             "img": "img/pianos/piano-a-queue.jpg",
-            "price": "84 799",
+            "price": 84799,
             "wood": "acacias",
             "dimension": "2m02 x 1m51",
             "weight": "162kg",
@@ -97,7 +97,7 @@
         {
             "name": "Klhausman Deluxe White",
             "img": "img/pianos/piano-a-queue-blanc.jpg",
-            "price": "48 327",
+            "price": 48327,
             "wood": "chêne",
             "dimension": "1m98 x 1m49",
             "weight": "133kg",
@@ -110,7 +110,7 @@
          {
             "name": "Klhausman Royal",
             "img": "img/pianos/piano-keys-royal.png",
-            "price": "140 900",
+            "price": 140900,
             "wood": "chêne",
             "dimension": "1m89 x 1m47",
             "weight": "121kg",
@@ -123,7 +123,7 @@
          {
             "name": "Klhausman Analog S3",
             "img": "img/pianos/piano-elec-rouge.jpg",
-            "price": "10 650",
+            "price": 10650,
             "wood": "érable",
             "dimension": "1m73 x 20.1cm",
             "weight": "2.4kg",
@@ -136,7 +136,7 @@
              {
             "name": "Klhausman Analog S1",
             "img": "img/pianos/piano-elec-marron.jpg",
-            "price": "8 370",
+            "price": 8370,
             "wood": "érable",
             "dimension": "1m77 x 18.6cm",
             "weight": "2.8kg",

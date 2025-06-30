@@ -276,7 +276,6 @@
     position: absolute;
     width: 100%;
     top: 1.5rem;
-    // padding-inline: 2rem;
     padding-bottom: 1.4rem;
     text-align: center;
     border-bottom: 1px solid whitesmoke;
@@ -289,7 +288,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        // padding-left: 3.5rem;
         font-size: 14px;
         font-weight: 200;
         gap: 6px;
@@ -298,7 +296,7 @@
     &__checkout-btn {
         width: 9rem;
         font-size: 0.9rem;
-        margin-left: 25%;
+        margin: auto;
         margin-top: 1.7rem;
         background-color: $btn-color;
         color: darken($txt-color, 5%);
@@ -314,12 +312,11 @@
     flex-direction: column;
     align-items: flex-start;
     &__item {
-        // @include flex-center-columns;
         display: flex;
         justify-content: space-evenly;
         margin-right: 2rem;
         list-style: none;
-        padding-bottom: 3rem;
+        padding-bottom: 2.3rem;
         &__img {
             display: block;
             width: 120px;
@@ -327,7 +324,6 @@
             object-fit: cover;
             border-radius: 10px;
             margin-right: 2rem;
-            // margin: auto;
         }
     }
 }
@@ -348,17 +344,19 @@
         padding-bottom: 0.8rem;
     }
     &__remove {
-        width: 6rem;
+        width: 3rem;
+        height: 1.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         font-size: 0.7rem;
         font-weight: 100;
         background-color: lighten($bg-main-color, 5%);;
         color: darken($txt-color, 10%);
-        padding: 6px;
-        text-align: center;
-        border-radius: 15px;
+        border-radius: 5px;
         border: none;
         box-shadow: rgba(138, 118, 6, 0.555) 0px 0px 2px 1px inset;
-        padding-top: 0.5rem;
         cursor: pointer;
     }
     &--separator {
@@ -368,4 +366,16 @@
         animation: twinkle 1.7s alternate-reverse infinite;
         margin-top: 2rem;
     }
+}
+#removeAll {
+    width: 6.5rem;
+    font-size: 0.8rem;
+    margin: auto;
+    background-color: lighten($btn-color, 5%);
+    color: darken($txt-color, 5%);
+    padding: 7px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: rgba(138, 118, 6, 0.555) 0px 0px 2px 1px inset;
+    cursor: pointer;
 }

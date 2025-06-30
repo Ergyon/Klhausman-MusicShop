@@ -133,6 +133,11 @@ body {
             color: $title-color;
             opacity: 0.8;
         }
+        &--checked {
+            color: $btn-color;
+            background: darken($title-color, 55%);
+        }
+
     }
 }
 
