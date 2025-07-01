@@ -2,7 +2,7 @@
     "violons": [
          {
             "name": "Klhausman Stratacelli",
-            "img": "img/violons/violon.jpg",
+            "img": "../img/violons/violon.jpg",
             "price": 21989,
             "wood": "épicéa",
             "dimension": "4/4",
@@ -15,7 +15,7 @@
         },
         {
             "name": "Klhausman Deluxe - Baroque",
-            "img": "img/violons/violon-dark-wood.jpg",
+            "img": "../img/violons/violon-dark-wood.jpg",
             "price": 11350,
             "wood": "érable",
             "dimension": "4/4",
@@ -28,7 +28,7 @@
         },
         {
             "name": "Klhausman Benvici - Modern",
-            "img": "img/violons/violon-benevici-modern.jpg",
+            "img": "../img/violons/violon-benevici-modern.jpg",
             "price": 14749,
             "wood": "ébène",
             "dimension": "4/4",
@@ -41,7 +41,7 @@
         },
         {
             "name": "De Bavoire II",
-            "img": "img/violons/violon-strings-zoom.jpg",
+            "img": "../img/violons/violon-strings-zoom.jpg",
             "price": 18685,
             "wood": "épicéa",
             "dimension": "4/4",
@@ -57,7 +57,7 @@
     "pianos": [
         {
             "name": "Klhausman Athena",
-            "img": "img/pianos/piano+mechanics2.jpg",
+            "img": "../img/pianos/piano+mechanics2.jpg",
             "price": 61675,
             "wood": "acajou",
             "dimension": "1m94",
@@ -70,7 +70,7 @@
         },
         {
             "name": "Acacias Mont-Satin 2",
-            "img": "img/pianos/piano-a-queue-marron.jpg",
+            "img": "../img/pianos/piano-a-queue-marron.jpg",
             "price": 42820,
             "wood": "acacias",
             "dimension": "2m06 x 1m57",
@@ -83,7 +83,7 @@
         },
         {
             "name": "Klhausman Historia",
-            "img": "img/pianos/piano-a-queue.jpg",
+            "img": "../img/pianos/piano-a-queue.jpg",
             "price": 84799,
             "wood": "acacias",
             "dimension": "2m02 x 1m51",
@@ -96,7 +96,7 @@
         },
         {
             "name": "Klhausman Deluxe White",
-            "img": "img/pianos/piano-a-queue-blanc.jpg",
+            "img": "../img/pianos/piano-a-queue-blanc.jpg",
             "price": 48327,
             "wood": "chêne",
             "dimension": "1m98 x 1m49",
@@ -109,7 +109,7 @@
         },
          {
             "name": "Klhausman Royal",
-            "img": "img/pianos/piano-keys-royal.png",
+            "img": "../img/pianos/piano-keys-royal.png",
             "price": 140900,
             "wood": "chêne",
             "dimension": "1m89 x 1m47",
@@ -122,7 +122,7 @@
         },
          {
             "name": "Klhausman Analog S3",
-            "img": "img/pianos/piano-elec-rouge.jpg",
+            "img": "../img/pianos/piano-elec-rouge.jpg",
             "price": 10650,
             "wood": "érable",
             "dimension": "1m73 x 20.1cm",
@@ -135,7 +135,7 @@
         },
         {
             "name": "Klhausman Analog S1",
-            "img": "img/pianos/piano-elec-marron.jpg",
+            "img": "../img/pianos/piano-elec-marron.jpg",
             "price": 8370,
             "wood": "érable",
             "dimension": "1m77 x 18.6cm",
@@ -151,7 +151,7 @@
     "guitares": [
         {
             "name": "Klhausman F-68",
-            "img": "img/guitares/gtr-acc-shadow.jpg",
+            "img": "../img/guitares/gtr-acc-shadow.jpg",
             "price": 6899,
             "wood": "cèdre",
             "dimension": "4/4",
@@ -164,7 +164,7 @@
         },
         {
             "name": "Telecaster Mont-Satin Black",
-            "img": "img/guitares/gtr-elec-black.jpg",
+            "img": "../img/guitares/gtr-elec-black.jpg",
             "price": 4355,
             "wood": "mohagony",
             "dimension": "4/4",
@@ -177,7 +177,7 @@
         },
         {
             "name": "Klhausman Stratocaster M.P",
-            "img": "img/guitares/gtr-elec-strat-floyd.jpg",
+            "img": "../img/guitares/gtr-elec-strat-floyd.jpg",
             "price": 8249,
             "wood": "mohagony",
             "dimension": "4/4",
@@ -190,7 +190,7 @@
         },
         {
             "name": "Klhausman LP-Primus",
-            "img": "img/guitares/gtr-elec-lp2.jpg",
+            "img": "../img/guitares/gtr-elec-lp2.jpg",
             "price": 12500,
             "wood": "acajou",
             "dimension": "4/4",
@@ -203,7 +203,7 @@
         },
         {
             "name": "Jazz Deluxe 68",
-            "img": "img/guitares/guitare-jazz-marron.jpg",
+            "img": "../img/guitares/guitare-jazz-marron.jpg",
             "price": 7420,
             "wood": "cèdre",
             "dimension": "4/4",
@@ -219,7 +219,7 @@
     "drums": [
         {
             "name": "Klhausman MP-2",
-            "img": "img/drums/toms.jpg",
+            "img": "../img/drums/toms.jpg",
             "price": 11700,
             "wood": "cèdre",
             "dimension": "4/4",
@@ -232,7 +232,7 @@
         },
         {
             "name": "Klhausman Stratacelli Tiger",
-            "img": "img/drums/drums-tiger-black.jpg",
+            "img": "../img/drums/drums-tiger-black.jpg",
             "price": 8430,
             "wood": "cèdre",
             "dimension": "4/4",
@@ -245,7 +245,7 @@
         },
         {
             "name": "Klhausman Gold 60s",
-            "img": "img/drums/drums-gold.jpg",
+            "img": "../img/drums/drums-gold.jpg",
             "price": 10689,
             "wood": "cèdre",
             "dimension": "4/4",
@@ -258,7 +258,7 @@
         },
         {
             "name": "Klhausman Emerauld BV",
-            "img": "img/drums/drums-green.jpg",
+            "img": "../img/drums/drums-green.jpg",
             "price": 16670,
             "wood": "cèdre",
             "dimension": "4/4",
@@ -271,7 +271,7 @@
         },
         {
             "name": "Klhausman Deluxe 86",
-            "img": "img/drums/drums-marron.jpg",
+            "img": "../img/drums/drums-marron.jpg",
             "price": 9119,
             "wood": "cèdre",
             "dimension": "4/4",
@@ -284,7 +284,7 @@
         },
         {
             "name": "Klhausman Saphir 2",
-            "img": "img/drums/drum-toms-blue.jpg",
+            "img": "../img/drums/drum-toms-blue.jpg",
             "price": 14839,
             "wood": "cèdre",
             "dimension": "4/4",

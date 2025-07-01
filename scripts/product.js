@@ -1,7 +1,7 @@
 // Recupere toutes les donnees
 export async function getData() {
     try {
-        const response = await fetch("data/products-data.json")
+        const response = await fetch("../data/products-data.json")
         if (!response.ok) {
             throw new Error("Erreur lors des chargement des données : " + response.status )
         }

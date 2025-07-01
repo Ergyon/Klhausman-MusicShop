@@ -1,7 +1,7 @@
 // Recuparations de tous les produits + categorie de filtre de la page
 async function getAllProducts() {
     try {
-        const response = await fetch("data/products-data.json")
+        const response = await fetch("../data/products-data.json")
         if (!response.ok) {
             throw new Error("Impossible de charger les donnees")
         }
@@ -36,6 +36,7 @@ function filterUniques(allProducts) {
     return Object.values(allProducts).flatMap(products => products).filter(product => product.uniques === true)
 }
 
+// Afficher produits filtres
 function displayFiltered(products) {
     const container = document.querySelector(".newGallery")
     if (!container || !products.length) {
@@ -52,6 +53,9 @@ function displayFiltered(products) {
         cardImg.src = product.img
         cardImg.alt = product.name
 
+        const cardInfos = document.createElement("div")
+        cardInfos.classList.add("newGallery__card__infos")
+
         const cardName = document.createElement("h4")
         cardName.classList.add("newGallery__card__name")
         cardName.textContent = product.name
@@ -65,8 +69,9 @@ function displayFiltered(products) {
         addBtn.textContent = "Ajouter au panier"
 
         card.appendChild(cardImg)
-        card.appendChild(cardName)
-        card.appendChild(cardPrice)
+        cardInfos.appendChild(cardName)
+        cardInfos.appendChild(cardPrice)
+        card.appendChild(cardInfos)
         card.appendChild(addBtn)
         container.appendChild(card)
     })
@@ -81,7 +86,7 @@ function typedLetters() {
     if(index < subtitleLetters.length) {
         headlineNewSub.textContent += subtitleLetters.charAt(index)
         index++
-        setTimeout(typedLetters, 35)
+        setTimeout(typedLetters, 45)
     }
 }
 

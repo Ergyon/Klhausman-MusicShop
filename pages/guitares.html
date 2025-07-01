@@ -4,37 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/filtered.css">
-    <title>Populaires</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/product-page.css">
+    <title>Guitares</title>
 </head>
 <body>
     <!-- Header -->
     <header class="main-header">
         <i class="fa-solid fa-bars main-header__menu" id="openMenu"></i>
-        <a href="index.html">
-            <img class="main-header__logo" src="img/klhausman-logo.png" alt="Logo Klhausman">
+        <a href="../index.html">
+            <img class="main-header__logo" src="../img/klhausman-logo.png" alt="Logo Klhausman">
         </a>
         <i class="fa-solid fa-cart-shopping main-header__cart" id="openCartShop"></i> 
     </header>
-
-    <!-- headline -->
-    <div class="headline-new">
-        <h3 class="headline-new__title">L'excellence continue de s'inventer au fil des jours</h3>
-        <h4 id="headlineNewSub" class="headline-new__subtitle"></h4>
+    
+    <div class="headline-products">
+        <h2 class="headline-products__title">Nos pianos prestigieux, <br> des timbres traversant les époques.</h2>
+        <p class="headline-products__text">  
+            Des matériaux nobles pour une sonorité incomparable. L’élégance sonore depuis des générations.
+        </p>
     </div>
 
-    <!-- Gallerie -->
-    <div class="newGallery-wrapper">
-        <div class="newGallery">
+    <!-- Produits -->
+    <section class="products-container">
+        
+    </section>
 
-        </div>
-    </div>
 
-       <!-- Footer -->
+
+    <!-- Footer -->
     <footer>
         <span id="copyright">© Klhausman Company</span>
-        <img class="footer-logo" src="img/klhausman-logo.png" alt="Logo Klhausman">
+        <img class="footer-logo" src="../img/klhausman-logo.png" alt="Logo Klhausman">
         <nav class="footer-nav">
             <a href="">Mentions légales</a>
             <a href="">Contacts</a>
@@ -81,7 +82,9 @@
             </ul>
         </div>
     </aside>
-
-    <script type="module" src="scripts/common.js"></script>
-    <script type="module" src="scripts/filter.js"></script>
+    
+    
+    <script src="../scripts/common.js"></script>
+    <script type="module" src="../scripts/product.js" ></script>
 </body>
+</html>
