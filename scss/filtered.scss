@@ -1,0 +1,59 @@
+@use 'global.scss' as *;
+@use 'root.scss' as *;
+
+.headline-new {
+    height: 280px;
+    width: 100%;
+    background: linear-gradient(to right, #577a73, #093637);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Helvetica, sans-serif;
+
+    &__title {
+        color: $txt-color;
+        font-size: 3rem;
+        font-weight: 200;
+        animation: appearsSlowly 1s ease-out forwards 0.4s;
+        opacity: 0;
+    }
+    &__subtitle {
+        color: darken($txt-color, 15%);
+        font-size: 1.4rem;
+        font-weight: 200;
+    }
+    #headlineNewSub::after {
+        content: "|";
+        animation: blink 2.8s alternate-reverse 3;
+        animation-delay: 0.6s;
+        margin-left: 5px;
+        color: darken($txt-color, 60%);
+        opacity: 0;
+    }
+}
+
+.newGallery-wrapper {
+    border: 1px solid red;
+    margin-inline: 17%;
+}
+.newGallery {
+    border: 1px solid blue;
+    &__card {
+
+        &__img {
+    
+        }
+        &__name {
+    
+        }
+        &__price {
+
+        }
+        &__addBtn {
+            
+        }
+    }
+
+}

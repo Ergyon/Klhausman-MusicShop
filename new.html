@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/product-page.css">
-    <title>Violons</title>
+    <link rel="stylesheet" href="css/filtered.css">
+    <title>Populaires</title>
 </head>
 <body>
     <!-- Header -->
@@ -17,23 +17,21 @@
         </a>
         <i class="fa-solid fa-cart-shopping main-header__cart" id="openCartShop"></i> 
     </header>
-    
-    <div class="headline-products">
-        <h2 class="headline-products__title">Violons d'exception, <br> héritage de la grande lutherie</h2>
-        <p class="headline-products__text">  
-        Chaque violon est façonné à la main par nos maîtres luthiers, à partir des bois les plus précieux. 
-        Leur savoir-faire donne naissance à des instruments au timbre profond, à la sonorité vibrante et à l’âme incomparable.
-        </p>
+
+    <!-- headline -->
+    <div class="headline-new">
+        <h3 class="headline-new__title">L'excellence continue de s'inventer au fil des jours</h3>
+        <h4 id="headlineNewSub" class="headline-new__subtitle"></h4>
     </div>
 
-    <!-- Produits -->
-    <section class="products-container">
-        
-    </section>
+    <!-- Gallerie -->
+    <div class="newGallery-wrapper">
+        <div class="newGallery">
 
+        </div>
+    </div>
 
-
-    <!-- Footer -->
+       <!-- Footer -->
     <footer>
         <span id="copyright">© Klhausman Company</span>
         <img class="footer-logo" src="img/klhausman-logo.png" alt="Logo Klhausman">
@@ -73,7 +71,7 @@
         <div class="cart">
             <h4 class="cart__title">Votre panier</h4>
             <ul class="cart--items">
-            
+                
             </ul>
             <ul class="cart__summary hidden">
                 <button id="removeAll" class="cart__checkout-btn">Vider le panier</button>
@@ -83,9 +81,7 @@
             </ul>
         </div>
     </aside>
-    
-    
-    <script src="scripts/common.js"></script>
-    <script type="module" src="scripts/product.js"></script>
+
+    <script type="module" src="scripts/common.js"></script>
+    <script type="module" src="scripts/filter.js"></script>
 </body>
-</html>
