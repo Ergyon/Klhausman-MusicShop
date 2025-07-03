@@ -50,7 +50,7 @@
             "id": "4",
             "new": true,
             "popular": false,
-            "unique": true
+            "unique": false
         }
     ],
 
@@ -65,7 +65,7 @@
             "creator": "Archibalde De Bavoire",
             "id": "1",
             "new": false,
-            "popular": true,
+            "popular": false,
             "unique": false
         },
         {
@@ -90,9 +90,9 @@
             "weight": "162kg",
             "creator": "Leonardo Benvici",
             "id": "3",
-            "new": true,
+            "new": false,
             "popular": false,
-            "unique": true
+            "unique": false
         },
         {
             "name": "Klhausman Deluxe White",
@@ -197,9 +197,9 @@
             "weight": "3.3kg",
             "creator": "Archibalde De Bavoire",
             "id": "4",
-            "new": false,
+            "new": true,
             "popular": false,
-            "unique": true
+            "unique": false
         },
         {
             "name": "Jazz Deluxe 68",
@@ -210,7 +210,7 @@
             "weight": "2.7kg",
             "creator": "Leonardo Benvici",
             "id": "5",
-            "new": true,
+            "new": false,
             "popular": true,
             "unique": false
         }
@@ -228,7 +228,7 @@
             "id": "1",
             "new": true,
             "popular": false,
-            "unique": true
+            "unique": false
         },
         {
             "name": "Klhausman Stratacelli Tiger",
@@ -252,7 +252,7 @@
             "weight": "2.1kg",
             "creator": "Madeleine Proust",
             "id": "1",
-            "new": true,
+            "new": false,
             "popular": false,
             "unique": true
         },

@@ -430,6 +430,33 @@ footer .footer-nav-logo {
   cursor: pointer;
 }
 
+.img-fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(46, 43, 43, 0.781);
+  animation: zoomInImage 0.4s ease-out forwards;
+}
+
+.overlay-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(32, 32, 32, 0.226);
+  animation: appearsSlowly 0.5s ease forwards;
+  z-index: 1000;
+  opacity: 0;
+}
+
 .headline-wrapper {
   width: 100%;
   height: 50rem;
@@ -615,6 +642,7 @@ footer .footer-nav-logo {
 .article-container .bigcard__about__btn:hover {
   background-color: #141412;
   box-shadow: rgba(199, 207, 143, 0.473) 1px 1px 1px 0px inset, rgba(255, 255, 255, 0.274) -1px -1px 1px 1px inset;
+  opacity: 0.7;
 }
 
 .fade-in {

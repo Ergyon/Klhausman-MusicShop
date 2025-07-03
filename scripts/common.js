@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
 }) 
 
 // Afficher image plein ecran
-function showFullScreenImage(imgSrc, altText) {
+export function showFullScreenImage(imgSrc, altText) {
     const existingOverlay = document.querySelector(".overlay-fullscreen")
     if (existingOverlay) 
         return
@@ -64,7 +64,7 @@ let cart = []
 const cartSummary = document.querySelector(".cart__summary")
 cartSummary.style.display = "none"
 
-function addToCart(product, addCartBtn) {
+export function addToCart(product, addCartBtn) {
     const cartItemsList = document.querySelector(".cart--items")
       
     const cartItem = document.createElement("li")
@@ -84,7 +84,10 @@ function addToCart(product, addCartBtn) {
 
     const priceItemShop = document.createElement("span")
     priceItemShop.classList.add("items__details__price")
-    priceItemShop.textContent = product.price.toLocaleString("fr-FR") + " $"
+    priceItemShop.textContent = product.price.toLocaleString("fr-FR", {
+        style: "currency",
+        currency: "EUR"
+    })
 
     const removeItemShop = document.createElement("button")
     removeItemShop.classList.add("items__details__remove")
@@ -155,11 +158,18 @@ function updateTotal() {
         total += product.price
     })
     
+    let taxAmount = total * 0.024
+    let totalCart = total + taxAmount
+
+    
     tax.innerHTML = "TVA : 2,4%"
-    totalContent.innerHTML = "Total : " + total.toLocaleString("fr-FR") + " $"
+    totalContent.innerHTML = "Total : " + totalCart.toLocaleString("fr-FR", {
+        style: 'currency',
+        currency: "EUR"
+    })
     
     if (cart.length === 0) {
-        cartSummary.classList.add("hidden")
+        cartSummary.style.display = "none"
     }
 }
 

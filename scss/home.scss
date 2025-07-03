@@ -168,6 +168,7 @@
                 &:hover {
                     background-color: lighten($btn-color, 3%);
                     box-shadow: rgba(199, 207, 143, 0.473) 1px 1px 1px 0px inset, rgba(255, 255, 255, 0.274) -1px -1px 1px 1px inset;
+                    opacity: 0.7;
                 }
             }
         }

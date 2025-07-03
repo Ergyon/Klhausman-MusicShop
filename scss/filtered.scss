@@ -4,17 +4,18 @@
 body {
     background: $footer-color;
 }
+
+// Headlines de chaque categories
 .headline-new {
     height: 280px;
     width: 100%;
-    background: linear-gradient(to right, #577a73, #093637);
+    background: linear-gradient(to top, #5c5e5d00, #093637c2);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: Helvetica, sans-serif;
-
     &__title {
         color: $txt-color;
         font-size: 3rem;
@@ -36,6 +37,7 @@ body {
     }
 }
 
+// Gallerie
 .newGallery-wrapper {
     margin-inline: 17%;
 }
@@ -51,12 +53,19 @@ body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem;
-        background: linear-gradient(to top, #577a73ad, #093637a1);
+        background: linear-gradient(to top, #5c5e5d00, #093637a1);
         box-shadow: rgba(156, 153, 153, 0.377) 2px 5px 20px 3px, rgba(107, 90, 90, 0.555) -10px -3px 20px 0px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+            transform: scale(111%);
+        }
         &__img {
             width: 700px;
             height: 450px;
             object-fit: cover;
+            &:hover {
+                cursor: pointer;
+            }
         }
         &__name {
             color: $txt-color;
@@ -75,7 +84,7 @@ body {
             box-shadow: rgba(204, 219, 232, 0.164) 3px 3px 6px 0px inset, rgba(64, 77, 65, 0.267) -3px -3px 6px 1px inset;
             border-radius: 50px;
             @include flex-center-columns;
-            font-size: 1rem;
+            font-size: 0.8rem;
             margin: auto;
             cursor: pointer;
             transition: 0.3s ease;
@@ -87,3 +96,4 @@ body {
         }
     }
 }
+

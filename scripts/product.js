@@ -1,3 +1,5 @@
+import { showFullScreenImage } from "./common.js"
+import { addToCart} from "./common.js"
 // Recupere toutes les donnees
 export async function getData() {
     try {
@@ -42,7 +44,10 @@ function displayProducts(products) {
 
         const price = document.createElement("span")
         price.classList.add("product__btn--price")
-        price.textContent = product.price.toLocaleString("fr-FR") + " $"
+        price.textContent = product.price.toLocaleString("fr-FR", {
+            style: "currency", 
+            currency: "EUR"
+        })
 
         const name = document.createElement("span")
         name.classList.add("product__name")

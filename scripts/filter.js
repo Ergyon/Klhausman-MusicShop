@@ -1,3 +1,6 @@
+import { addToCart } from "../scripts/common.js"
+import { showFullScreenImage } from "../scripts/common.js"
+
 // Recuparations de tous les produits + categorie de filtre de la page
 async function getAllProducts() {
     try {
@@ -33,7 +36,7 @@ function filterPopular(allProducts) {
 }
 
 function filterUniques(allProducts) {
-    return Object.values(allProducts).flatMap(products => products).filter(product => product.uniques === true)
+    return Object.values(allProducts).flatMap(products => products).filter(product => product.unique === true)
 }
 
 // Afficher produits filtres
@@ -62,18 +65,29 @@ function displayFiltered(products) {
 
         const cardPrice = document.createElement("span")
         cardPrice.classList.add("newGallery__card__price")
-        cardPrice.textContent = product.price
+        cardPrice.textContent = product.price.toLocaleString("fr-FR", {
+            style: "currency",
+            currency: "EUR"
+        }) 
 
         const addBtn = document.createElement("button")
         addBtn.classList.add("newGallery__card__addBtn")
-        addBtn.textContent = "Ajouter au panier"
-
+        addBtn.textContent = "Sélectionner ce produit"
+        
         card.appendChild(cardImg)
         cardInfos.appendChild(cardName)
         cardInfos.appendChild(cardPrice)
         card.appendChild(cardInfos)
         card.appendChild(addBtn)
         container.appendChild(card)
+
+        cardImg.addEventListener("click", () => {
+            showFullScreenImage(product.img, product.name)
+        })
+
+        addBtn.addEventListener("click", () => {
+            addToCart(product, addBtn)
+        })
     })
 }
 
@@ -127,3 +141,4 @@ async function initialize() {
 window.addEventListener("DOMContentLoaded", () => {
     initialize()
 })
+
